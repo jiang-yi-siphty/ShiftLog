@@ -1,0 +1,6 @@
+framework module Pods_ShiftLogUITests {
+  umbrella header "Pods-ShiftLogUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

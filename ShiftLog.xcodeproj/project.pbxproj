@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7EB4DB5385ABDBA5E6538AC2 /* Pods_ShiftLogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F26EF1C668DC5DA1AD450950 /* Pods_ShiftLogTests.framework */; };
 		A2570978205BD0220003C0A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2570977205BD0220003C0A4 /* AppDelegate.swift */; };
 		A257097A205BD0220003C0A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2570979205BD0220003C0A4 /* ViewController.swift */; };
 		A257097D205BD0220003C0A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A257097B205BD0220003C0A4 /* Main.storyboard */; };
@@ -15,6 +16,14 @@
 		A2570985205BD0220003C0A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2570983205BD0220003C0A4 /* LaunchScreen.storyboard */; };
 		A2570990205BD0220003C0A4 /* ShiftLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A257098F205BD0220003C0A4 /* ShiftLogTests.swift */; };
 		A257099B205BD0220003C0A4 /* ShiftLogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A257099A205BD0220003C0A4 /* ShiftLogUITests.swift */; };
+		A2B2CBF4205BE7A10019E8BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2B2CBF3205BE7A10019E8BF /* GoogleService-Info.plist */; };
+		A2B2CBF5205BE7A10019E8BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2B2CBF3205BE7A10019E8BF /* GoogleService-Info.plist */; };
+		A2B2CBF7205D4D530019E8BF /* ShiftLogsMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = A2B2CBF6205D4D530019E8BF /* ShiftLogsMockData.json */; };
+		A2B2CBF8205D4D530019E8BF /* ShiftLogsMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = A2B2CBF6205D4D530019E8BF /* ShiftLogsMockData.json */; };
+		A2B2CBFB205D4E250019E8BF /* ShiftLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2CBFA205D4E250019E8BF /* ShiftLog.swift */; };
+		A2B2CBFC205D4E250019E8BF /* ShiftLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2CBFA205D4E250019E8BF /* ShiftLog.swift */; };
+		C0C7D17AE659C3B93143535B /* Pods_ShiftLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EAA5A2C0ABACD41E2228014 /* Pods_ShiftLog.framework */; };
+		D592349386F68F6E81E6112B /* Pods_ShiftLogUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B893BCE22D47B63E4548EE9 /* Pods_ShiftLogUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		33C0956886EC2B6C2F2BD837 /* Pods-ShiftLogUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftLogUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiftLogUITests/Pods-ShiftLogUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5153B9DE5C3998C0DD0ADA8B /* Pods-ShiftLogUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftLogUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShiftLogUITests/Pods-ShiftLogUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		67A005B176F40E06CFF39DBF /* Pods-ShiftLog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftLog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShiftLog/Pods-ShiftLog.debug.xcconfig"; sourceTree = "<group>"; };
+		6B4F5EEBEE6271874BC21FF4 /* Pods-ShiftLogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftLogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiftLogTests/Pods-ShiftLogTests.release.xcconfig"; sourceTree = "<group>"; };
+		6B893BCE22D47B63E4548EE9 /* Pods_ShiftLogUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShiftLogUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EAA5A2C0ABACD41E2228014 /* Pods_ShiftLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShiftLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2570974205BD0220003C0A4 /* ShiftLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShiftLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2570977205BD0220003C0A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2570979205BD0220003C0A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +64,12 @@
 		A2570996205BD0220003C0A4 /* ShiftLogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShiftLogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A257099A205BD0220003C0A4 /* ShiftLogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftLogUITests.swift; sourceTree = "<group>"; };
 		A257099C205BD0220003C0A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2B2CBF3205BE7A10019E8BF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A2B2CBF6205D4D530019E8BF /* ShiftLogsMockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShiftLogsMockData.json; sourceTree = "<group>"; };
+		A2B2CBFA205D4E250019E8BF /* ShiftLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftLog.swift; sourceTree = "<group>"; };
+		D7ABA8380DE1DA0786DEF6AE /* Pods-ShiftLogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftLogTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShiftLogTests/Pods-ShiftLogTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F26EF1C668DC5DA1AD450950 /* Pods_ShiftLogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShiftLogTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7D367F355CB40C150309A5A /* Pods-ShiftLog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftLog.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiftLog/Pods-ShiftLog.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0C7D17AE659C3B93143535B /* Pods_ShiftLog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EB4DB5385ABDBA5E6538AC2 /* Pods_ShiftLogTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +93,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D592349386F68F6E81E6112B /* Pods_ShiftLogUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CE4D19E3F6D18E9742B8B65 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67A005B176F40E06CFF39DBF /* Pods-ShiftLog.debug.xcconfig */,
+				F7D367F355CB40C150309A5A /* Pods-ShiftLog.release.xcconfig */,
+				D7ABA8380DE1DA0786DEF6AE /* Pods-ShiftLogTests.debug.xcconfig */,
+				6B4F5EEBEE6271874BC21FF4 /* Pods-ShiftLogTests.release.xcconfig */,
+				5153B9DE5C3998C0DD0ADA8B /* Pods-ShiftLogUITests.debug.xcconfig */,
+				33C0956886EC2B6C2F2BD837 /* Pods-ShiftLogUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A257096B205BD0220003C0A4 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +120,8 @@
 				A257098E205BD0220003C0A4 /* ShiftLogTests */,
 				A2570999205BD0220003C0A4 /* ShiftLogUITests */,
 				A2570975205BD0220003C0A4 /* Products */,
+				2CE4D19E3F6D18E9742B8B65 /* Pods */,
+				C991EDDBCE6B552513BBB628 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,12 +138,14 @@
 		A2570976205BD0220003C0A4 /* ShiftLog */ = {
 			isa = PBXGroup;
 			children = (
+				A2B2CBF9205D4DDC0019E8BF /* Models */,
 				A2570977205BD0220003C0A4 /* AppDelegate.swift */,
 				A2570979205BD0220003C0A4 /* ViewController.swift */,
 				A257097B205BD0220003C0A4 /* Main.storyboard */,
 				A2570981205BD0220003C0A4 /* Assets.xcassets */,
 				A2570983205BD0220003C0A4 /* LaunchScreen.storyboard */,
 				A2570986205BD0220003C0A4 /* Info.plist */,
+				A2B2CBF3205BE7A10019E8BF /* GoogleService-Info.plist */,
 				A257097E205BD0220003C0A4 /* ShiftLog.xcdatamodeld */,
 			);
 			path = ShiftLog;
@@ -115,6 +156,7 @@
 			children = (
 				A257098F205BD0220003C0A4 /* ShiftLogTests.swift */,
 				A2570991205BD0220003C0A4 /* Info.plist */,
+				A2B2CBF6205D4D530019E8BF /* ShiftLogsMockData.json */,
 			);
 			path = ShiftLogTests;
 			sourceTree = "<group>";
@@ -128,6 +170,24 @@
 			path = ShiftLogUITests;
 			sourceTree = "<group>";
 		};
+		A2B2CBF9205D4DDC0019E8BF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A2B2CBFA205D4E250019E8BF /* ShiftLog.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C991EDDBCE6B552513BBB628 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8EAA5A2C0ABACD41E2228014 /* Pods_ShiftLog.framework */,
+				F26EF1C668DC5DA1AD450950 /* Pods_ShiftLogTests.framework */,
+				6B893BCE22D47B63E4548EE9 /* Pods_ShiftLogUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A257099F205BD0220003C0A4 /* Build configuration list for PBXNativeTarget "ShiftLog" */;
 			buildPhases = (
+				AC33FFA74D045B6B794C65B7 /* [CP] Check Pods Manifest.lock */,
 				A2570970205BD0220003C0A4 /* Sources */,
 				A2570971205BD0220003C0A4 /* Frameworks */,
 				A2570972205BD0220003C0A4 /* Resources */,
+				1F7AD4EB55A200E2C88D34F2 /* [CP] Embed Pods Frameworks */,
+				39FAF2575E7C414631C6BBE3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +215,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A25709A2205BD0220003C0A4 /* Build configuration list for PBXNativeTarget "ShiftLogTests" */;
 			buildPhases = (
+				911458A70519C3AF36338613 /* [CP] Check Pods Manifest.lock */,
 				A2570987205BD0220003C0A4 /* Sources */,
 				A2570988205BD0220003C0A4 /* Frameworks */,
 				A2570989205BD0220003C0A4 /* Resources */,
+				444B8FDCBAAE0D07666DAE2B /* [CP] Embed Pods Frameworks */,
+				6EC51C0516D347235F303267 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A25709A5205BD0220003C0A4 /* Build configuration list for PBXNativeTarget "ShiftLogUITests" */;
 			buildPhases = (
+				6B8A40213E6698093DDBEDA7 /* [CP] Check Pods Manifest.lock */,
 				A2570992205BD0220003C0A4 /* Sources */,
 				A2570993205BD0220003C0A4 /* Frameworks */,
 				A2570994205BD0220003C0A4 /* Resources */,
+				6AC9782E56674737E382234A /* [CP] Embed Pods Frameworks */,
+				B0E9D6ED0FD306CD69DF2698 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,6 +305,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2570985205BD0220003C0A4 /* LaunchScreen.storyboard in Resources */,
+				A2B2CBF4205BE7A10019E8BF /* GoogleService-Info.plist in Resources */,
+				A2B2CBF7205D4D530019E8BF /* ShiftLogsMockData.json in Resources */,
 				A2570982205BD0220003C0A4 /* Assets.xcassets in Resources */,
 				A257097D205BD0220003C0A4 /* Main.storyboard in Resources */,
 			);
@@ -245,6 +316,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2B2CBF5205BE7A10019E8BF /* GoogleService-Info.plist in Resources */,
+				A2B2CBF8205D4D530019E8BF /* ShiftLogsMockData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,11 +330,176 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F7AD4EB55A200E2C88D34F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ShiftLog/Pods-ShiftLog-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxMKMapView/RxMKMapView.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxMKMapView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShiftLog/Pods-ShiftLog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39FAF2575E7C414631C6BBE3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShiftLog/Pods-ShiftLog-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		444B8FDCBAAE0D07666DAE2B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShiftLogTests/Pods-ShiftLogTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AC9782E56674737E382234A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShiftLogUITests/Pods-ShiftLogUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B8A40213E6698093DDBEDA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShiftLogUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6EC51C0516D347235F303267 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShiftLogTests/Pods-ShiftLogTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		911458A70519C3AF36338613 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShiftLogTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC33FFA74D045B6B794C65B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShiftLog-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0E9D6ED0FD306CD69DF2698 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShiftLogUITests/Pods-ShiftLogUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A2570970205BD0220003C0A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2B2CBFB205D4E250019E8BF /* ShiftLog.swift in Sources */,
 				A2570980205BD0220003C0A4 /* ShiftLog.xcdatamodeld in Sources */,
 				A257097A205BD0220003C0A4 /* ViewController.swift in Sources */,
 				A2570978205BD0220003C0A4 /* AppDelegate.swift in Sources */,
@@ -272,6 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2B2CBFC205D4E250019E8BF /* ShiftLog.swift in Sources */,
 				A2570990205BD0220003C0A4 /* ShiftLogTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,10 +667,11 @@
 		};
 		A25709A0205BD0220003C0A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67A005B176F40E06CFF39DBF /* Pods-ShiftLog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GZQL33LF2B;
+				DEVELOPMENT_TEAM = 4PQU2QH5JS;
 				INFOPLIST_FILE = ShiftLog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.siphty.ShiftLog;
@@ -443,10 +683,11 @@
 		};
 		A25709A1205BD0220003C0A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7D367F355CB40C150309A5A /* Pods-ShiftLog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GZQL33LF2B;
+				DEVELOPMENT_TEAM = 4PQU2QH5JS;
 				INFOPLIST_FILE = ShiftLog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.siphty.ShiftLog;
@@ -458,6 +699,7 @@
 		};
 		A25709A3205BD0220003C0A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7ABA8380DE1DA0786DEF6AE /* Pods-ShiftLogTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -475,6 +717,7 @@
 		};
 		A25709A4205BD0220003C0A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B4F5EEBEE6271874BC21FF4 /* Pods-ShiftLogTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -492,6 +735,7 @@
 		};
 		A25709A6205BD0220003C0A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5153B9DE5C3998C0DD0ADA8B /* Pods-ShiftLogUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -508,6 +752,7 @@
 		};
 		A25709A7205BD0220003C0A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33C0956886EC2B6C2F2BD837 /* Pods-ShiftLogUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

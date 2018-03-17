@@ -1,0 +1,133 @@
+
+[
+ {
+ "id": 1,
+ "start": "2017-01-20T14:28:27+11:00",
+ "end": "2017-01-20T14:29:27+11:00",
+ "startLatitude": "0.00000",
+ "startLongitude": "0.00000",
+ "endLatitude": "0.00000",
+ "endLongitude": "0.00000",
+ "image": "https://unsplash.it/500/500?random"
+ },
+ {
+ "id": 2,
+ "start": "2017-01-20T14:29:27+11:00",
+ "end": "2017-01-20T14:29:27+11:00",
+ "startLatitude": "0",
+ "startLongitude": "0",
+ "endLatitude": "0",
+ "endLongitude": "0",
+ "image": "https://unsplash.it/500/500?random"
+ },
+ {
+ "id": 3,
+ "start": "2017-01-20T14:29:27+11:00",
+ "end": "2017-01-20T14:29:27+11:00",
+ "startLatitude": "0",
+ "startLongitude": "0",
+ "endLatitude": "0.00000",
+ "endLongitude": "0.00000",
+ "image": "https://unsplash.it/500/500?random"
+ },
+ {
+ "id": 4,
+ "start": "2017-01-29T22:59:11+0000",
+ "end": "2017-01-29T23:03:23+0000",
+ "startLatitude": "-33.8861531",
+ "startLongitude": "151.2145433",
+ "endLatitude": "0.0",
+ "endLongitude": "0.0",
+ "image": "https://unsplash.it/500/500?random"
+ },
+ {
+ "id": 5,
+ "start": "2017-01-29T23:03:25+0000",
+ "end": "2017-01-29T23:03:27+0000",
+ "startLatitude": "0.0",
+ "startLongitude": "0.0",
+ "endLatitude": "0.0",
+ "endLongitude": "0.0",
+ "image": "https://unsplash.it/500/500?random"
+ },
+ {
+ "id": 6,
+ "start": "2017-01-29T23:03:28+0000",
+ "end": "2017-01-29T23:03:30+0000",
+ "startLatitude": "0.0",
+ "startLongitude": "0.0",
+ "endLatitude": "0.0",
+ "endLongitude": "0.0",
+ "image": "https://unsplash.it/500/500?random"
+ },
+ {
+ "id": 7,
+ "start": "2017-01-29T23:03:32+0000",
+ "end": "2017-01-29T23:03:34+0000",
+ "startLatitude": "0.0",
+ "startLongitude": "0.0",
+ "endLatitude": "0.0",
+ "endLongitude": "0.0",
+ "image": "https://unsplash.it/500/500?random"
+ },
+ {
+ "id": 8,
+ "start": "2017-01-29T23:03:35+0000",
+ "end": "2017-01-29T23:03:38+0000",
+ "startLatitude": "0.0",
+ "startLongitude": "0.0",
+ "endLatitude": "0.0",
+ "endLongitude": "0.0",
+ "image": "https://unsplash.it/500/500?random"
+ },
+ {
+ "id": 9,
+ "start": "2017-01-29T23:03:39+0000",
+ "end": "2017-01-29T23:18:45+0000",
+ "startLatitude": "0.0",
+ "startLongitude": "0.0",
+ "endLatitude": "0.0",
+ "endLongitude": "0.0",
+ "image": "https://unsplash.it/500/500?random"
+ },
+ {
+ "id": 10,
+ "start": "2017-01-30T03:08:22+0000",
+ "end": "2017-01-30T03:08:29+0000",
+ "startLatitude": "0.0",
+ "startLongitude": "0.0",
+ "endLatitude": "0.0",
+ "endLongitude": "0.0",
+ "image": "https://unsplash.it/500/500?random"
+ },
+ {
+ "id": 11,
+ "start": "2017-01-30T03:08:43+0000",
+ "end": "2017-01-30T03:08:50+0000",
+ "startLatitude": "0.0",
+ "startLongitude": "0.0",
+ "endLatitude": "0.0",
+ "endLongitude": "0.0",
+ "image": "https://unsplash.it/500/500?random"
+ },
+ {
+ "id": 12,
+ "start": "2017-01-30T03:10:24+0000",
+ "end": "2017-01-30T03:11:47+0000",
+ "startLatitude": "0.0",
+ "startLongitude": "0.0",
+ "endLatitude": "0.0",
+ "endLongitude": "0.0",
+ "image": "https://unsplash.it/500/500?random"
+ },
+ {
+ "id": 13,
+ "start": "2017-01-17T06:35:57+00:00",
+ "end": "",
+ "startLatitude": "32.00000",
+ "startLongitude": "16.00000",
+ "endLatitude": "0.00000",
+ "endLongitude": "0.00000",
+ "image": "https://unsplash.it/500/500?random"
+ }
+ ]
