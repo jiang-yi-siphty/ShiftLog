@@ -1,6 +1,9 @@
 //
 //	ShiftLog.swift
 //	Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
+//
+//  Created by Yi JIANG on 18/3/18.
+//  Copyright © 2018 Siphty. All rights reserved.
 
 import Foundation
 

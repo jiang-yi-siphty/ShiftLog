@@ -22,6 +22,22 @@
 		A2B2CBF8205D4D530019E8BF /* ShiftLogsMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = A2B2CBF6205D4D530019E8BF /* ShiftLogsMockData.json */; };
 		A2B2CBFB205D4E250019E8BF /* ShiftLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2CBFA205D4E250019E8BF /* ShiftLog.swift */; };
 		A2B2CBFC205D4E250019E8BF /* ShiftLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2CBFA205D4E250019E8BF /* ShiftLog.swift */; };
+		A2E7C660205E132E006C2B54 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C65F205E132E006C2B54 /* ApiClient.swift */; };
+		A2E7C661205E132E006C2B54 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C65F205E132E006C2B54 /* ApiClient.swift */; };
+		A2E7C663205E13C4006C2B54 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C662205E13C4006C2B54 /* ApiService.swift */; };
+		A2E7C664205E13C4006C2B54 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C662205E13C4006C2B54 /* ApiService.swift */; };
+		A2E7C666205E6F3E006C2B54 /* MissingAuthToken.json in Resources */ = {isa = PBXBuildFile; fileRef = A2E7C665205E6F3E006C2B54 /* MissingAuthToken.json */; };
+		A2E7C667205E6F3E006C2B54 /* MissingAuthToken.json in Resources */ = {isa = PBXBuildFile; fileRef = A2E7C665205E6F3E006C2B54 /* MissingAuthToken.json */; };
+		A2E7C669205E72DB006C2B54 /* WrongAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = A2E7C668205E72DB006C2B54 /* WrongAPI.json */; };
+		A2E7C66A205E72DB006C2B54 /* WrongAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = A2E7C668205E72DB006C2B54 /* WrongAPI.json */; };
+		A2E7C66C205E7318006C2B54 /* BusinessMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = A2E7C66B205E7318006C2B54 /* BusinessMockData.json */; };
+		A2E7C66D205E7318006C2B54 /* BusinessMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = A2E7C66B205E7318006C2B54 /* BusinessMockData.json */; };
+		A2E7C66F205E7357006C2B54 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C66E205E7357006C2B54 /* Business.swift */; };
+		A2E7C670205E7357006C2B54 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C66E205E7357006C2B54 /* Business.swift */; };
+		A2E7C672205E74BC006C2B54 /* StartShiftMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = A2E7C671205E74BC006C2B54 /* StartShiftMockData.json */; };
+		A2E7C673205E74BC006C2B54 /* StartShiftMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = A2E7C671205E74BC006C2B54 /* StartShiftMockData.json */; };
+		A2E7C675205E773F006C2B54 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C674205E773F006C2B54 /* Shift.swift */; };
+		A2E7C676205E773F006C2B54 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C674205E773F006C2B54 /* Shift.swift */; };
 		C0C7D17AE659C3B93143535B /* Pods_ShiftLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EAA5A2C0ABACD41E2228014 /* Pods_ShiftLog.framework */; };
 		D592349386F68F6E81E6112B /* Pods_ShiftLogUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B893BCE22D47B63E4548EE9 /* Pods_ShiftLogUITests.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +83,14 @@
 		A2B2CBF3205BE7A10019E8BF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A2B2CBF6205D4D530019E8BF /* ShiftLogsMockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShiftLogsMockData.json; sourceTree = "<group>"; };
 		A2B2CBFA205D4E250019E8BF /* ShiftLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftLog.swift; sourceTree = "<group>"; };
+		A2E7C65F205E132E006C2B54 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		A2E7C662205E13C4006C2B54 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		A2E7C665205E6F3E006C2B54 /* MissingAuthToken.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MissingAuthToken.json; sourceTree = "<group>"; };
+		A2E7C668205E72DB006C2B54 /* WrongAPI.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = WrongAPI.json; sourceTree = "<group>"; };
+		A2E7C66B205E7318006C2B54 /* BusinessMockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BusinessMockData.json; sourceTree = "<group>"; };
+		A2E7C66E205E7357006C2B54 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		A2E7C671205E74BC006C2B54 /* StartShiftMockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StartShiftMockData.json; sourceTree = "<group>"; };
+		A2E7C674205E773F006C2B54 /* Shift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shift.swift; sourceTree = "<group>"; };
 		D7ABA8380DE1DA0786DEF6AE /* Pods-ShiftLogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftLogTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShiftLogTests/Pods-ShiftLogTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F26EF1C668DC5DA1AD450950 /* Pods_ShiftLogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShiftLogTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D367F355CB40C150309A5A /* Pods-ShiftLog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftLog.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiftLog/Pods-ShiftLog.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +162,7 @@
 		A2570976205BD0220003C0A4 /* ShiftLog */ = {
 			isa = PBXGroup;
 			children = (
+				A2E7C65E205E12D1006C2B54 /* ServerManager */,
 				A2B2CBF9205D4DDC0019E8BF /* Models */,
 				A2570977205BD0220003C0A4 /* AppDelegate.swift */,
 				A2570979205BD0220003C0A4 /* ViewController.swift */,
@@ -157,6 +182,10 @@
 				A257098F205BD0220003C0A4 /* ShiftLogTests.swift */,
 				A2570991205BD0220003C0A4 /* Info.plist */,
 				A2B2CBF6205D4D530019E8BF /* ShiftLogsMockData.json */,
+				A2E7C665205E6F3E006C2B54 /* MissingAuthToken.json */,
+				A2E7C668205E72DB006C2B54 /* WrongAPI.json */,
+				A2E7C66B205E7318006C2B54 /* BusinessMockData.json */,
+				A2E7C671205E74BC006C2B54 /* StartShiftMockData.json */,
 			);
 			path = ShiftLogTests;
 			sourceTree = "<group>";
@@ -174,8 +203,19 @@
 			isa = PBXGroup;
 			children = (
 				A2B2CBFA205D4E250019E8BF /* ShiftLog.swift */,
+				A2E7C66E205E7357006C2B54 /* Business.swift */,
+				A2E7C674205E773F006C2B54 /* Shift.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A2E7C65E205E12D1006C2B54 /* ServerManager */ = {
+			isa = PBXGroup;
+			children = (
+				A2E7C65F205E132E006C2B54 /* ApiClient.swift */,
+				A2E7C662205E13C4006C2B54 /* ApiService.swift */,
+			);
+			path = ServerManager;
 			sourceTree = "<group>";
 		};
 		C991EDDBCE6B552513BBB628 /* Frameworks */ = {
@@ -304,9 +344,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2E7C672205E74BC006C2B54 /* StartShiftMockData.json in Resources */,
 				A2570985205BD0220003C0A4 /* LaunchScreen.storyboard in Resources */,
 				A2B2CBF4205BE7A10019E8BF /* GoogleService-Info.plist in Resources */,
+				A2E7C669205E72DB006C2B54 /* WrongAPI.json in Resources */,
+				A2E7C666205E6F3E006C2B54 /* MissingAuthToken.json in Resources */,
 				A2B2CBF7205D4D530019E8BF /* ShiftLogsMockData.json in Resources */,
+				A2E7C66C205E7318006C2B54 /* BusinessMockData.json in Resources */,
 				A2570982205BD0220003C0A4 /* Assets.xcassets in Resources */,
 				A257097D205BD0220003C0A4 /* Main.storyboard in Resources */,
 			);
@@ -316,8 +360,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2E7C66A205E72DB006C2B54 /* WrongAPI.json in Resources */,
 				A2B2CBF5205BE7A10019E8BF /* GoogleService-Info.plist in Resources */,
 				A2B2CBF8205D4D530019E8BF /* ShiftLogsMockData.json in Resources */,
+				A2E7C673205E74BC006C2B54 /* StartShiftMockData.json in Resources */,
+				A2E7C66D205E7318006C2B54 /* BusinessMockData.json in Resources */,
+				A2E7C667205E6F3E006C2B54 /* MissingAuthToken.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,9 +548,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2B2CBFB205D4E250019E8BF /* ShiftLog.swift in Sources */,
+				A2E7C66F205E7357006C2B54 /* Business.swift in Sources */,
 				A2570980205BD0220003C0A4 /* ShiftLog.xcdatamodeld in Sources */,
+				A2E7C663205E13C4006C2B54 /* ApiService.swift in Sources */,
+				A2E7C675205E773F006C2B54 /* Shift.swift in Sources */,
 				A257097A205BD0220003C0A4 /* ViewController.swift in Sources */,
 				A2570978205BD0220003C0A4 /* AppDelegate.swift in Sources */,
+				A2E7C660205E132E006C2B54 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +564,10 @@
 			files = (
 				A2B2CBFC205D4E250019E8BF /* ShiftLog.swift in Sources */,
 				A2570990205BD0220003C0A4 /* ShiftLogTests.swift in Sources */,
+				A2E7C664205E13C4006C2B54 /* ApiService.swift in Sources */,
+				A2E7C670205E7357006C2B54 /* Business.swift in Sources */,
+				A2E7C676205E773F006C2B54 /* Shift.swift in Sources */,
+				A2E7C661205E132E006C2B54 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
