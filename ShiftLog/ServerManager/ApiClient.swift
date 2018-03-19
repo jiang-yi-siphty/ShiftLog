@@ -8,7 +8,7 @@
 
 import Foundation
 import RxSwift
-import RxCocoa
+//import RxCocoa
 import Alamofire
 
 class ApiClient: ApiService {
@@ -18,34 +18,21 @@ class ApiClient: ApiService {
             self.networkRequest(config, completionHandler: { (data, error) in
                 guard let data = data else {
                     if let error = error {
-                        observable.onNext(RequestStatus.fail(error))
+                        observable.onNext(RequestStatus.fail(RequestError(error.errorDescription ?? "Unknown Error")))
                     } else {
-                        observable.onNext(RequestStatus.fail(RequestError("Parse JSON information failed.")))
+                        observable.onNext(RequestStatus.fail(RequestError("Parse JSON information failed without error.")))
                     }
                     observable.onCompleted()
                     return
                 }
-                var response: AnyObject? = nil
-                switch config {
-                case .bussiness:
-                    response = JSONDecoder().decode(Business.self, from: data)
-                case .shifts:
-                    response = JSONDecoder().decode(Shift.self, from: data)
-                case .startShift, .endShift:
-                    break
-                }
-                if let response = response {
-                    observable.onNext(RequestStatus.success(response))
-                } else {
-                    observable.onNext(RequestStatus.fail(RequestError("Parse JSON information failed.")))
-                }
+                observable.onNext(RequestStatus.success(data))
                 observable.onCompleted()
             })
             return Disposables.create()
             }.share()
     }
     
-    func networkRequest(_ config: ApiConfig, completionHandler: @escaping (([String : Any]?, RequestError?) -> Void)) {
+    func networkRequest(_ config: ApiConfig, completionHandler: @escaping ((Data?, RequestError?) -> Void)) {
         networkRequestByAlamoFire(config, completionHandler: completionHandler)
         //        networkRequestByNSURLSession(config, completionHandler: completionHandler)
     }
@@ -54,12 +41,30 @@ class ApiClient: ApiService {
 // Other Network request methods and Response handler
 extension ApiClient {
     
-    func networkRequestByAlamoFire(_ config: ApiConfig, completionHandler: @escaping ((_ jsonResponse: [String: Any]?, _ error: RequestError?) -> Void)) {
+    func networkRequestByAlamoFire(_ config: ApiConfig, completionHandler: @escaping ((_ data: Data?, _ error: RequestError?) -> Void)) {
         URLCache.shared.removeAllCachedResponses()
-        let url = config.getFullUrl()
-        let header = config.header
-        let theRequest = Alamofire.request(url, method: config.method, parameters: config.parameters, encoding: .utf8, headers: config.header)
-        theRequest.set
+        guard let url = config.getFullUrl() else {
+            print("URL is nil, can't request.")
+            return
+        }
+        var method: HTTPMethod = .post
+        switch config.method {
+        case "POST":
+            method = .post
+        case "GET":
+            method = .get
+        case "PUT":
+            method = .put
+        case "DELETE":
+            method = .delete
+        default:
+            method = .post
+        }
+        let theRequest = Alamofire.request(url,
+                                           method: method,
+                                           parameters: config.parameters,
+                                           encoding: JSONEncoding.default,
+                                           headers: config.header as? [String: String])
         theRequest.responseData(queue: DispatchQueue.global()) { response in
             guard let data = response.result.value else {
                 print("Error: \(String(describing: response.result.error))")
@@ -70,9 +75,12 @@ extension ApiClient {
         }
     }
     
-    func networkRequestByNSURLSession(_ config: ApiConfig, completionHandler: @escaping ((_ jsonResponse: [String: Any]?, _ error: RequestError?) -> Void)) {
+    func networkRequestByNSURLSession(_ config: ApiConfig,_ completionHandler: @escaping ((_ data: Data?, _ error: RequestError?) -> Void)) {
         URLCache.shared.removeAllCachedResponses()
-        let url = config.getFullUrl()
+        guard let url = config.getFullUrl() else {
+            print("URL is nil. Can't request.")
+            return
+        }
         let session = URLSession.shared
         let task = session.dataTask(with: url) { (data, response, error) in
             self.responseHandler(data, error, completionHandler)
@@ -80,20 +88,7 @@ extension ApiClient {
         task.resume()
     }
     
-    fileprivate func responseHandler(_ data: Data?, _ error: Error?, _ completionHandler: @escaping ((_ jsonResponse: [String: Any]?, _ error: RequestError?) -> Void)){
-        if let error = error {
-            completionHandler(nil, RequestError(error.localizedDescription))
-        } else if let data = data {
-            do {
-                //create json object from data
-                if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
-                    completionHandler(json, nil)
-                } else {
-                    completionHandler(nil, RequestError("JSON decode failed!!!"))
-                }
-            } catch let error {
-                completionHandler(nil, RequestError(error.localizedDescription))
-            }
-        }
+    fileprivate func responseHandler(_ data: Data?, _ error: Error?, _ completionHandler: @escaping ((_ data: Data?, _ error: RequestError?) -> Void)){
+        completionHandler(data, RequestError(error?.localizedDescription ?? "Error with no message"))
     }
 }

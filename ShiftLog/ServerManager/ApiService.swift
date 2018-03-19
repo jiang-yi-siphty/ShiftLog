@@ -8,10 +8,10 @@
 
 import Foundation
 import RxSwift
-import RxCocoa
+//import RxCocoa
 
 enum RequestStatus {
-    case success(AnyObject?)
+    case success(Data?)
     case fail(RequestError)
 }
 
@@ -31,9 +31,9 @@ enum  ApiConfig {
     case bussiness
     case startShift
     case endShift
-    case shifts
+    case shiftLogs
     
-    fileprivate static let shiftLogsBaseUrl = "https://apjoqdqpi3.execute­api.us­west­2.amazonaws.com/dmc"
+    fileprivate static let shiftLogBaseUrl = "https://apjoqdqpi3.execute-api.us-west-2.amazonaws.com/dmc"
     
     var urlPath: String {
         switch self {
@@ -43,7 +43,7 @@ enum  ApiConfig {
             return "/shift/start"
         case .endShift:
             return "/shift/end"
-        case .shifts:
+        case .shiftLogs:
             return "/shifts"
         }
     }
@@ -56,41 +56,42 @@ enum  ApiConfig {
             return "POST"
         case .endShift:
             return "POST"
-        case .shifts:
+        case .shiftLogs:
             return "GET"
         }
     }
     
     var header: [String: Any]?{
         switch self {
-        case .bussiness, .startShift, .endShift, .shifts:
+        case .bussiness, .startShift, .endShift, .shiftLogs:
             return ["Authorization": "Deputy " + "d82ece8d514aca7e24d3fc11fbb8dada57f2966c"]
         }
     }
     
     var parameters: [String: Any]? {
         switch self {
-        case .bussiness, .startShift, .endShift, .shifts:
+        case .bussiness, .startShift, .endShift, .shiftLogs:
             return nil
         }
     }
     
-    func getFullUrl() -> URL {
+    func getFullUrl() -> URL? {
         var baseUrl: String!
         switch self {
-        case .bussiness, .startShift, .endShift, .shifts:
-            baseUrl = ApiConfig.shiftLogsBaseUrl
+        case .bussiness, .startShift, .endShift, .shiftLogs:
+            baseUrl = ApiConfig.shiftLogBaseUrl
         }
         if let url = URL(string: baseUrl + self.urlPath)  {
             return url
         } else {
-            return URL(string: baseUrl)!
+            print("could not open url, it was nil")
         }
+        return nil
     }
 }
 
 protocol ApiService {
     func fetchRestfulApi(_ config: ApiConfig) -> Observable<RequestStatus>
-    func networkRequest(_ config: ApiConfig, completionHandler: @escaping ((_ jsonResponse: [String: Any]?, _ error: RequestError?) -> Void))
+    func networkRequest(_ config: ApiConfig, completionHandler: @escaping ((_ data: Data?, _ error: RequestError?) -> Void))
 }
 

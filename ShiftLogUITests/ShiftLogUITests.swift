@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import RxSwift
 
 class ShiftLogUITests: XCTestCase {
         

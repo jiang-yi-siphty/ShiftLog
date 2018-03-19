@@ -6,7 +6,7 @@ def shared_pods_for_target
     pod 'RxCocoa'
     pod 'RxMKMapView'
     pod 'Alamofire'
-    pod 'ObjectMapper'
+    pod 'Firebase'
     pod 'Firebase/Core'
     pod 'Firebase/Database'
 end
