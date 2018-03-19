@@ -11,7 +11,7 @@
 
 import Foundation
 
-struct Shift : Codable {
+struct ShiftEvent : Codable {
     
     let latitude : String?
     let longitude : String?

@@ -25,7 +25,7 @@ class ShiftLogTests: XCTestCase {
     }
     
     
-    func testScenicLocationServerWithCorrectApi() {
+    func testShiftLogsApi() {
         let apiClient = ApiClient()
         apiClient.fetchRestfulApi(ApiConfig.shiftLogs)
             .subscribe(onNext: { status in
@@ -42,6 +42,40 @@ class ShiftLogTests: XCTestCase {
                         shiftLogs = []
                     }
                     XCTAssertTrue(shiftLogs!.count > 0)
+                //MARK: We can test more key:value to verify the decode logic is right.
+                case .fail(let error):
+                    print(error.errorDescription ?? "Faild to load ScenicLocation data")
+                    XCTAssertFalse(true)
+                }
+            }, onError: nil, onCompleted: nil, onDisposed: nil)
+            .disposed(by: disposeBag)
+    }
+    
+    
+    func testBusinessApi() {
+        let apiClient = ApiClient()
+        apiClient.fetchRestfulApi(ApiConfig.bussiness)
+            .subscribe(onNext: { status in
+                var business: Business?
+                switch status {
+                case .success(let data):
+                    guard let data = data else {
+                        XCTAssertTrue(false)
+                        return
+                    }
+                    do {
+                        business = try JSONDecoder().decode(Business.self, from: data)
+                        print("\(business.debugDescription)")
+                    } catch {
+                        business = nil
+                        XCTAssertTrue(false)
+                    }
+                    guard let businessName = business?.name else {
+                        XCTAssertTrue(false)
+                        return
+                    }
+                    XCTAssertTrue(business?.name == "Deputy")
+                    XCTAssertTrue(business?.logo == "https://www.myob.com/au/addons/media/logos/deputy_logo_1.png")
                 //MARK: We can test more key:value to verify the decode logic is right.
                 case .fail(let error):
                     print(error.errorDescription ?? "Faild to load ScenicLocation data")

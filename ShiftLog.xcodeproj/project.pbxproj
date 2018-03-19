@@ -18,7 +18,7 @@
 		A2E7C660205E132E006C2B54 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C65F205E132E006C2B54 /* ApiClient.swift */; };
 		A2E7C663205E13C4006C2B54 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C662205E13C4006C2B54 /* ApiService.swift */; };
 		A2E7C66F205E7357006C2B54 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C66E205E7357006C2B54 /* Business.swift */; };
-		A2E7C675205E773F006C2B54 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C674205E773F006C2B54 /* Shift.swift */; };
+		A2E7C675205E773F006C2B54 /* ShiftEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C674205E773F006C2B54 /* ShiftEvent.swift */; };
 		A2E7C679205F5627006C2B54 /* ShiftLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C678205F5627006C2B54 /* ShiftLogViewModel.swift */; };
 		A2E7C67C205F5C8C006C2B54 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C67B205F5C8C006C2B54 /* Notifications.swift */; };
 		A2E7C693205FBCC8006C2B54 /* ShiftLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C692205FBCC8006C2B54 /* ShiftLogTests.swift */; };
@@ -37,14 +37,16 @@
 		A2E7C6AB205FC081006C2B54 /* ShiftLogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2CBFA205D4E250019E8BF /* ShiftLogItem.swift */; };
 		A2E7C6AD205FC085006C2B54 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C66E205E7357006C2B54 /* Business.swift */; };
 		A2E7C6AE205FC085006C2B54 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C66E205E7357006C2B54 /* Business.swift */; };
-		A2E7C6AF205FC08B006C2B54 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C674205E773F006C2B54 /* Shift.swift */; };
-		A2E7C6B0205FC08B006C2B54 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C674205E773F006C2B54 /* Shift.swift */; };
+		A2E7C6AF205FC08B006C2B54 /* ShiftEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C674205E773F006C2B54 /* ShiftEvent.swift */; };
+		A2E7C6B0205FC08B006C2B54 /* ShiftEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C674205E773F006C2B54 /* ShiftEvent.swift */; };
 		A2E7C6B1205FC08E006C2B54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2570979205BD0220003C0A4 /* ViewController.swift */; };
 		A2E7C6B2205FC08E006C2B54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2570979205BD0220003C0A4 /* ViewController.swift */; };
 		A2E7C6B3205FC092006C2B54 /* ShiftLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C678205F5627006C2B54 /* ShiftLogViewModel.swift */; };
 		A2E7C6B4205FC092006C2B54 /* ShiftLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C678205F5627006C2B54 /* ShiftLogViewModel.swift */; };
 		A2E7C6B5205FC0D1006C2B54 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C67B205F5C8C006C2B54 /* Notifications.swift */; };
 		A2E7C6B6205FC0D1006C2B54 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C67B205F5C8C006C2B54 /* Notifications.swift */; };
+		A2E7C6B8205FDAE0006C2B54 /* BusinessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C6B7205FDAE0006C2B54 /* BusinessViewModel.swift */; };
+		A2E7C6B9205FDAE0006C2B54 /* BusinessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C6B7205FDAE0006C2B54 /* BusinessViewModel.swift */; };
 		C0C7D17AE659C3B93143535B /* Pods_ShiftLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EAA5A2C0ABACD41E2228014 /* Pods_ShiftLog.framework */; };
 		C8C107B1E90AA5350E0214BF /* Pods_ShiftLogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F26EF1C668DC5DA1AD450950 /* Pods_ShiftLogTests.framework */; };
 		D592349386F68F6E81E6112B /* Pods_ShiftLogUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B893BCE22D47B63E4548EE9 /* Pods_ShiftLogUITests.framework */; };
@@ -89,7 +91,7 @@
 		A2E7C65F205E132E006C2B54 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		A2E7C662205E13C4006C2B54 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		A2E7C66E205E7357006C2B54 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
-		A2E7C674205E773F006C2B54 /* Shift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shift.swift; sourceTree = "<group>"; };
+		A2E7C674205E773F006C2B54 /* ShiftEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftEvent.swift; sourceTree = "<group>"; };
 		A2E7C678205F5627006C2B54 /* ShiftLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftLogViewModel.swift; sourceTree = "<group>"; };
 		A2E7C67B205F5C8C006C2B54 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		A2E7C690205FBCC8006C2B54 /* ShiftLogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShiftLogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +102,7 @@
 		A2E7C69C205FBCE9006C2B54 /* MissingAuthToken.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MissingAuthToken.json; sourceTree = "<group>"; };
 		A2E7C69D205FBCE9006C2B54 /* ShiftLogsMockData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ShiftLogsMockData.json; sourceTree = "<group>"; };
 		A2E7C69E205FBCE9006C2B54 /* BusinessMockData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BusinessMockData.json; sourceTree = "<group>"; };
+		A2E7C6B7205FDAE0006C2B54 /* BusinessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessViewModel.swift; sourceTree = "<group>"; };
 		D7ABA8380DE1DA0786DEF6AE /* Pods-ShiftLogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftLogTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShiftLogTests/Pods-ShiftLogTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F26EF1C668DC5DA1AD450950 /* Pods_ShiftLogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShiftLogTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D367F355CB40C150309A5A /* Pods-ShiftLog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftLog.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiftLog/Pods-ShiftLog.release.xcconfig"; sourceTree = "<group>"; };
@@ -200,7 +203,7 @@
 			children = (
 				A2B2CBFA205D4E250019E8BF /* ShiftLogItem.swift */,
 				A2E7C66E205E7357006C2B54 /* Business.swift */,
-				A2E7C674205E773F006C2B54 /* Shift.swift */,
+				A2E7C674205E773F006C2B54 /* ShiftEvent.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				A2E7C678205F5627006C2B54 /* ShiftLogViewModel.swift */,
+				A2E7C6B7205FDAE0006C2B54 /* BusinessViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -569,8 +573,9 @@
 				A2B2CBFB205D4E250019E8BF /* ShiftLogItem.swift in Sources */,
 				A2E7C679205F5627006C2B54 /* ShiftLogViewModel.swift in Sources */,
 				A2E7C66F205E7357006C2B54 /* Business.swift in Sources */,
+				A2E7C6B8205FDAE0006C2B54 /* BusinessViewModel.swift in Sources */,
 				A2E7C663205E13C4006C2B54 /* ApiService.swift in Sources */,
-				A2E7C675205E773F006C2B54 /* Shift.swift in Sources */,
+				A2E7C675205E773F006C2B54 /* ShiftEvent.swift in Sources */,
 				A257097A205BD0220003C0A4 /* ViewController.swift in Sources */,
 				A2570978205BD0220003C0A4 /* AppDelegate.swift in Sources */,
 				A2E7C660205E132E006C2B54 /* ApiClient.swift in Sources */,
@@ -586,7 +591,7 @@
 				A2E7C6A9205FC07D006C2B54 /* AppDelegate.swift in Sources */,
 				A257099B205BD0220003C0A4 /* ShiftLogUITests.swift in Sources */,
 				A2E7C6B3205FC092006C2B54 /* ShiftLogViewModel.swift in Sources */,
-				A2E7C6AF205FC08B006C2B54 /* Shift.swift in Sources */,
+				A2E7C6AF205FC08B006C2B54 /* ShiftEvent.swift in Sources */,
 				A2E7C6AD205FC085006C2B54 /* Business.swift in Sources */,
 				A2E7C6A5205FC076006C2B54 /* ApiClient.swift in Sources */,
 				A2E7C6B1205FC08E006C2B54 /* ViewController.swift in Sources */,
@@ -603,10 +608,11 @@
 				A2E7C6A8205FC07C006C2B54 /* AppDelegate.swift in Sources */,
 				A2E7C693205FBCC8006C2B54 /* ShiftLogTests.swift in Sources */,
 				A2E7C6B4205FC092006C2B54 /* ShiftLogViewModel.swift in Sources */,
-				A2E7C6B0205FC08B006C2B54 /* Shift.swift in Sources */,
+				A2E7C6B0205FC08B006C2B54 /* ShiftEvent.swift in Sources */,
 				A2E7C6AE205FC085006C2B54 /* Business.swift in Sources */,
 				A2E7C6A4205FC075006C2B54 /* ApiClient.swift in Sources */,
 				A2E7C6B2205FC08E006C2B54 /* ViewController.swift in Sources */,
+				A2E7C6B9205FDAE0006C2B54 /* BusinessViewModel.swift in Sources */,
 				A2E7C6A7205FC07A006C2B54 /* ApiService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

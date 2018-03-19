@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreLocation
-//import Firebase
 import FirebaseCore
 
 @UIApplicationMain
