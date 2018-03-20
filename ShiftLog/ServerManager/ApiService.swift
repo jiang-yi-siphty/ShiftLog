@@ -61,7 +61,7 @@ enum  ApiConfig {
         }
     }
     
-    var header: [String: Any]?{
+    var header: [String: String]?{
         switch self {
         case .bussiness, .startShift, .endShift, .shiftLogs:
             return ["Authorization": "Deputy " + "d82ece8d514aca7e24d3fc11fbb8dada57f2966c"]
@@ -91,7 +91,8 @@ enum  ApiConfig {
 }
 
 protocol ApiService {
+    func postRestfulApi(_ config: ApiConfig, body: Data) -> Observable<RequestStatus>
     func fetchRestfulApi(_ config: ApiConfig) -> Observable<RequestStatus>
-    func networkRequest(_ config: ApiConfig, completionHandler: @escaping ((_ data: Data?, _ error: RequestError?) -> Void))
+    func networkRequest(_ config: ApiConfig, body: Data?, completionHandler: @escaping ((Data?, RequestError?) -> Void))
 }
 

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ShiftLogMainViewController.swift
 //  ShiftLog
 //
 //  Created by Yi JIANG on 16/3/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ShiftLogMainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

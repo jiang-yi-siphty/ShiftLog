@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Shift Log-->
+        <scene sceneID="QUH-5I-sNb">
+            <objects>
+                <viewController id="SlD-Uc-kuv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oFP-1X-3PD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="NKe-ni-RnO"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Shift Log" id="h5S-wD-Wrn"/>
+                    <connections>
+                        <segue destination="ThR-hs-Tka" kind="show" id="YGs-6K-4x4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="acr-pz-orZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="574" y="-551"/>
+        </scene>
+        <!--Shifts-->
+        <scene sceneID="Act-Tr-njQ">
+            <objects>
+                <tableViewController id="ThR-hs-Tka" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yzv-3p-kp0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ynd-zO-GYx">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ynd-zO-GYx" id="9Tg-v7-2gw">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ThR-hs-Tka" id="Lb2-yQ-WJz"/>
+                            <outlet property="delegate" destination="ThR-hs-Tka" id="YbA-cf-Ozt"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Shifts" id="dUH-jV-9Ri"/>
+                    <connections>
+                        <segue destination="7GB-Ta-nlQ" kind="show" id="n1H-l5-O6L"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZD8-x6-k41" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1494" y="-552"/>
+        </scene>
+        <!--Shift Location-->
+        <scene sceneID="8h2-b6-Ytv">
+            <objects>
+                <viewController id="7GB-Ta-nlQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qqo-BX-maX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="z7d-KN-mQV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="z7d-KN-mQV" firstAttribute="top" secondItem="Qqo-BX-maX" secondAttribute="top" id="4ck-gq-E20"/>
+                            <constraint firstItem="z7d-KN-mQV" firstAttribute="leading" secondItem="Q82-2i-tbi" secondAttribute="leading" id="byk-Y6-dvi"/>
+                            <constraint firstItem="z7d-KN-mQV" firstAttribute="trailing" secondItem="Q82-2i-tbi" secondAttribute="trailing" id="k6v-nT-Q2d"/>
+                            <constraint firstItem="z7d-KN-mQV" firstAttribute="bottom" secondItem="Q82-2i-tbi" secondAttribute="bottom" id="uhD-LI-zez"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Q82-2i-tbi"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Shift Location" id="qRE-KQ-A2F"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y4Q-8k-pfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2520.8000000000002" y="-552.77361319340332"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bIj-kX-1cB">
+            <objects>
+                <navigationController id="QqD-GV-iN9" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sXo-hC-Bte">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="SlD-Uc-kuv" kind="relationship" relationship="rootViewController" id="N5a-vw-eP2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ehw-MI-WNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-310" y="-552"/>
+        </scene>
+    </scenes>
+</document>

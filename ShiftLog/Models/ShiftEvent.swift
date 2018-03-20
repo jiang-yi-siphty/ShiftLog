@@ -13,9 +13,9 @@ import Foundation
 
 struct ShiftEvent : Codable {
     
-    let latitude : String?
-    let longitude : String?
-    let time : String?
+    var latitude : String?
+    var longitude : String?
+    var time : String?
     
     
     enum CodingKeys: String, CodingKey {
@@ -28,6 +28,12 @@ struct ShiftEvent : Codable {
         latitude = try values.decodeIfPresent(String.self, forKey: .latitude)
         longitude = try values.decodeIfPresent(String.self, forKey: .longitude)
         time = try values.decodeIfPresent(String.self, forKey: .time)
+    }
+    
+    init() {
+        latitude = nil
+        longitude = nil
+        time = nil
     }
     
     

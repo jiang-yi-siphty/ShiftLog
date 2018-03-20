@@ -9,6 +9,7 @@
 import XCTest
 import RxSwift
 import RxCocoa
+import CoreLocation
 
 class ShiftLogTests: XCTestCase {
     fileprivate let disposeBag = DisposeBag()
@@ -85,6 +86,57 @@ class ShiftLogTests: XCTestCase {
             .disposed(by: disposeBag)
     }
     
+    func testStartShiftApi() {
+        do {
+            let apiClient = ApiClient()
+            let body = try JSONEncoder().encode(createShiftEvent())
+            apiClient.postRestfulApi(ApiConfig.startShift, body: body)
+                .subscribe(onNext: { status in
+                    switch status {
+                    case .success(let data):
+                        guard let data = data else {
+                            XCTAssertTrue(false)
+                            return
+                        }
+                        print(data)
+                    //MARK: We can test more key:value to verify the decode logic is right.
+                    case .fail(let error):
+                        print(error.errorDescription ?? "Faild to load ScenicLocation data")
+                        XCTAssertFalse(true)
+                    }
+                }, onError: nil, onCompleted: nil, onDisposed: nil)
+                .disposed(by: disposeBag)
+        } catch {
+            print("JSON encoder throw exception")
+        }
+    }
+    
+    func testEndShiftApi() {
+        do {
+            let apiClient = ApiClient()
+            let body = try JSONEncoder().encode(createShiftEvent())
+            apiClient.postRestfulApi(ApiConfig.endShift, body: body)
+                .subscribe(onNext: { status in
+                    switch status {
+                    case .success(let data):
+                        guard let data = data else {
+                            XCTAssertTrue(false)
+                            return
+                        }
+                        print(data)
+                    //MARK: We can test more key:value to verify the decode logic is right.
+                    case .fail(let error):
+                        print(error.errorDescription ?? "Faild to load ScenicLocation data")
+                        XCTAssertFalse(true)
+                    }
+                }, onError: nil, onCompleted: nil, onDisposed: nil)
+                .disposed(by: disposeBag)
+        } catch {
+            print("JSON encoder throw exception")
+        }
+    }
+            
+    
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
@@ -97,4 +149,39 @@ class ShiftLogTests: XCTestCase {
         }
     }
     
+}
+
+extension ShiftLogTests {
+    
+    func createShiftEvent() -> ShiftEvent {
+        var shiftEvent = ShiftEvent()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        shiftEvent.time = dateFormatter.string(from: Date())
+        let currentLocation = getCurrentLocation()
+        shiftEvent.longitude = "\(currentLocation?.coordinate.longitude ?? 0.0)"
+        shiftEvent.latitude = "\(currentLocation?.coordinate.longitude ?? 0.0)"
+        return shiftEvent
+    }
+    
+    func getCurrentLocation() -> CLLocation? {
+        let locationManager = CLLocationManager()
+        
+        var currentLocation: CLLocation? = nil
+        if CLLocationManager.locationServicesEnabled() {
+            switch CLLocationManager.authorizationStatus() {
+            case .notDetermined, .restricted, .denied:
+                if #available(iOS 11.0, *) {
+                    locationManager.requestAlwaysAuthorization()
+                } else {
+                    locationManager.requestWhenInUseAuthorization()
+                }
+            case .authorizedAlways, .authorizedWhenInUse:
+                currentLocation = locationManager.location
+            }
+        } else {
+            print("Location services are not enabled")
+        }
+        return currentLocation
+    }
 }

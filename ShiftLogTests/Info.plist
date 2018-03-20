@@ -18,5 +18,11 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This App needs your location to show nearest scenics.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This App needs your location to show nearest scenics.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This App needs your location to show nearest scenics.</string>
 </dict>
 </plist>

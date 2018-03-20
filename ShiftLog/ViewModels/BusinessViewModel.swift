@@ -31,6 +31,7 @@ class BusinessViewModel {
     }
     
     fileprivate func fetchBusiness(_ apiService: ApiService) {
+        //TODO: If network has issue, fetch data from DB
         self.isFetchingData.value = true
         apiService.fetchRestfulApi(ApiConfig.bussiness)
             .subscribe(onNext: { status in

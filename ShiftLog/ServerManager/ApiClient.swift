@@ -13,9 +13,9 @@ import Alamofire
 
 class ApiClient: ApiService {
     
-    func fetchRestfulApi(_ config: ApiConfig) -> Observable<RequestStatus> {
+    func postRestfulApi(_ config: ApiConfig, body: Data) -> Observable<RequestStatus> {
         return Observable<RequestStatus>.create { observable -> Disposable in
-            self.networkRequest(config, completionHandler: { (data, error) in
+            self.networkRequest(config, body: body, completionHandler: { (data, error) in
                 guard let data = data else {
                     if let error = error {
                         observable.onNext(RequestStatus.fail(RequestError(error.errorDescription ?? "Unknown Error")))
@@ -32,8 +32,27 @@ class ApiClient: ApiService {
             }.share()
     }
     
-    func networkRequest(_ config: ApiConfig, completionHandler: @escaping ((Data?, RequestError?) -> Void)) {
-        networkRequestByAlamoFire(config, completionHandler: completionHandler)
+    func fetchRestfulApi(_ config: ApiConfig) -> Observable<RequestStatus> {
+        return Observable<RequestStatus>.create { observable -> Disposable in
+            self.networkRequest(config, body:nil , completionHandler: { (data, error) in
+                guard let data = data else {
+                    if let error = error {
+                        observable.onNext(RequestStatus.fail(RequestError(error.errorDescription ?? "Unknown Error")))
+                    } else {
+                        observable.onNext(RequestStatus.fail(RequestError("Parse JSON information failed without error.")))
+                    }
+                    observable.onCompleted()
+                    return
+                }
+                observable.onNext(RequestStatus.success(data))
+                observable.onCompleted()
+            })
+            return Disposables.create()
+            }.share()
+    }
+    
+    func networkRequest(_ config: ApiConfig, body: Data?, completionHandler: @escaping ((Data?, RequestError?) -> Void)) {
+        networkRequestByAlamoFire(config, body:body, completionHandler: completionHandler)
         //        networkRequestByNSURLSession(config, completionHandler: completionHandler)
     }
 }
@@ -41,31 +60,22 @@ class ApiClient: ApiService {
 // Other Network request methods and Response handler
 extension ApiClient {
     
-    func networkRequestByAlamoFire(_ config: ApiConfig, completionHandler: @escaping ((_ data: Data?, _ error: RequestError?) -> Void)) {
+    func networkRequestByAlamoFire(_ config: ApiConfig, body: Data?, completionHandler: @escaping ((_ data: Data?, _ error: RequestError?) -> Void)) {
         URLCache.shared.removeAllCachedResponses()
         guard let url = config.getFullUrl() else {
             print("URL is nil, can't request.")
             return
         }
-        var method: HTTPMethod = .post
-        switch config.method {
-        case "POST":
-            method = .post
-        case "GET":
-            method = .get
-        case "PUT":
-            method = .put
-        case "DELETE":
-            method = .delete
-        default:
-            method = .post
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = config.method
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        if let header = config.header {
+            request.allHTTPHeaderFields = header
         }
-        let theRequest = Alamofire.request(url,
-                                           method: method,
-                                           parameters: config.parameters,
-                                           encoding: JSONEncoding.default,
-                                           headers: config.header as? [String: String])
-        theRequest.responseData(queue: DispatchQueue.global()) { response in
+        request.httpBody = body
+        
+        Alamofire.request(request).responseData { (response) in
             guard let data = response.result.value else {
                 print("Error: \(String(describing: response.result.error))")
                 completionHandler(nil, RequestError((response.result.error?.localizedDescription)!))

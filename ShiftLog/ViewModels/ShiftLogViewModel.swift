@@ -28,6 +28,8 @@ class ShiftLogViewModel {
     }
     
     fileprivate func fetchShiftLogs(_ apiService: ApiService) {
+        //TODO: If network has issue, fetch data from DB
+        
         self.isFetchingData.value = true
         apiService.fetchRestfulApi(ApiConfig.shiftLogs)
             .subscribe(onNext: { status in
