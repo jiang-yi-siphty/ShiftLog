@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'DCD5019059D64E885E2CDAE69B646586'
+               BlueprintIdentifier = '8697B8B0BFA828706535C7BB6E687196'
                BlueprintName = 'RxMKMapView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'RxMKMapView.framework'>

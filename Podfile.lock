@@ -22,6 +22,7 @@ PODS:
   - GoogleToolboxForMac/Defines (2.1.3)
   - GoogleToolboxForMac/NSData+zlib (2.1.3):
     - GoogleToolboxForMac/Defines (= 2.1.3)
+  - Kingfisher (4.6.3)
   - leveldb-library (1.20)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -39,6 +40,7 @@ DEPENDENCIES:
   - Alamofire
   - Firebase/Core
   - Firebase/Database
+  - Kingfisher
   - RxCocoa
   - RxMKMapView
   - RxSwift
@@ -51,12 +53,13 @@ SPEC CHECKSUMS:
   FirebaseDatabase: 5f0bc6134c5c237cf55f9e1249d406770a75eafd
   FirebaseInstanceID: d2058a35e9bebda1b6dd42486b84917bde552a9d
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
+  Kingfisher: 98e6d5b5e807645743e8ed5ececd25d688d38452
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
   RxMKMapView: 5cd47305a35e6dbf8bceb7713280060950203188
   RxSwift: e49536837d9901277638493ea537394d4b55f570
 
-PODFILE CHECKSUM: 3b314f80d1b9f229f1551f8303a99d807e39bb93
+PODFILE CHECKSUM: 948945d04c2548f84d82d1c6105081193a79c25d
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.3.1

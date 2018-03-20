@@ -13,7 +13,7 @@ import Firebase
 class ShiftLogViewModel {
     
     let disposeBag = DisposeBag()
-    var shiftLogs = Variable<[ShiftLogItem]?>(nil)
+    var shiftLogs = Variable<[ShiftLogItem]>([])
     var isFetchingData = Variable<Bool>(false)
     var isAlertShowing = Variable<Bool>(false)
     private var apiService: ApiService? = nil
@@ -42,7 +42,7 @@ class ShiftLogViewModel {
                         self.shiftLogs.value = try JSONDecoder().decode([ShiftLogItem].self, from: data)
                         self.isAlertShowing.value = false
                     } catch {
-                        self.shiftLogs.value = nil
+                        self.shiftLogs.value = []
                         self.isAlertShowing.value = true
                     }
                 case .fail(let error):
@@ -51,7 +51,7 @@ class ShiftLogViewModel {
                         do {
                         self.shiftLogs.value = try JSONDecoder().decode([ShiftLogItem].self, from: data)
                         } catch {
-                            self.shiftLogs.value = nil
+                            self.shiftLogs.value = []
                             self.isAlertShowing.value = true
                         }
                     })
@@ -64,7 +64,7 @@ class ShiftLogViewModel {
                     do {
                         self.shiftLogs.value = try JSONDecoder().decode([ShiftLogItem].self, from: data)
                     } catch {
-                        self.shiftLogs.value = nil
+                        self.shiftLogs.value = []
                         self.isAlertShowing.value = true
                     }
                 })
@@ -77,14 +77,16 @@ class ShiftLogViewModel {
 //Firebase DB / Offline DB
 extension ShiftLogViewModel {
     func storeUserShiftLogs(_ data: Data) {
-        let shiftLogsRef = Database.database().reference(withPath: "ShiftLogs")
-        shiftLogsRef.child("\(ApiConfig.firstNameYiSHA1)").setValue(data)
+        let shiftLogsRef = Database.database().reference(withPath: ApiConfig.firstNameYiSHA1)
+        let dataString = String(data: data, encoding: String.Encoding.utf8) as String!
+        shiftLogsRef.child("ShiftLogs").setValue(dataString)
     }
     
     func restoreUserShiftLogs(_ handler:@escaping ((_ data: Data?) -> Void) ){
-        let shiftLogsRef = Database.database().reference(withPath: "ShiftLogs")
-        shiftLogsRef.child("\(ApiConfig.firstNameYiSHA1)").observeSingleEvent(of: .value, with: { (snapshot) in
-            handler(snapshot.value as? Data)
+        let shiftLogsRef = Database.database().reference(withPath: ApiConfig.firstNameYiSHA1)
+        shiftLogsRef.child("ShiftLogs").observeSingleEvent(of: .value, with: { (snapshot) in
+            let dataString = snapshot.value as! String
+            handler(dataString.data(using: String.Encoding.utf8))
         })
     }
 }

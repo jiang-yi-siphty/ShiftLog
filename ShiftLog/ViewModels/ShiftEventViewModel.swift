@@ -107,7 +107,7 @@ class ShiftEventViewModel {
         shiftEvent.time = dateFormatter.string(from: Date())
         let currentLocation = getCurrentLocation()
         shiftEvent.longitude = "\(currentLocation?.coordinate.longitude ?? 0.0)"
-        shiftEvent.latitude = "\(currentLocation?.coordinate.longitude ?? 0.0)"
+        shiftEvent.latitude = "\(currentLocation?.coordinate.latitude ?? 0.0)"
         return shiftEvent
     }
     
@@ -137,14 +137,14 @@ class ShiftEventViewModel {
 //Firebase DB / Offline DB
 extension ShiftEventViewModel {
     func storeShiftEvent(inShift: Bool) {
-        let shiftEventRef = Database.database().reference(withPath: "ShiftStatus")
+        let shiftEventRef = Database.database().reference(withPath: "\(ApiConfig.firstNameYiSHA1)")
         isInShift.value = inShift
-        shiftEventRef.child("InShift").setValue(inShift)
+        shiftEventRef.child("ShiftStatus").child("InShift").setValue(inShift)
     }
     
     func restoreShiftEvent(_ handler:@escaping ((_ inShift: Bool?) -> Void) ){
-        let shiftEventRef = Database.database().reference(withPath: "ShiftStatus")
-        shiftEventRef.child("InShift").observeSingleEvent(of: .value, with: { (snapshot) in
+        let shiftEventRef = Database.database().reference(withPath: "\(ApiConfig.firstNameYiSHA1)")
+        shiftEventRef.child("ShiftStatus").child("InShift").observeSingleEvent(of: .value, with: { (snapshot) in
             handler(snapshot.value as? Bool)
         })
     }

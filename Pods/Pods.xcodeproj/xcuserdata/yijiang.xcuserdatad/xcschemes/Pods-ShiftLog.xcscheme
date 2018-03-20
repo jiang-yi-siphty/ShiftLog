@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA502B18A8A96F69206F9D403393C12C"
+               BlueprintIdentifier = "7CE76DD41BDBFEBF4C395AEC79D53117"
                BuildableName = "Pods_ShiftLog.framework"
                BlueprintName = "Pods-ShiftLog"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA502B18A8A96F69206F9D403393C12C"
+            BlueprintIdentifier = "7CE76DD41BDBFEBF4C395AEC79D53117"
             BuildableName = "Pods_ShiftLog.framework"
             BlueprintName = "Pods-ShiftLog"
             ReferencedContainer = "container:Pods.xcodeproj">

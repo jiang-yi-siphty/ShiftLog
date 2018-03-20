@@ -66,6 +66,12 @@
 		A2E7C6B6205FC0D1006C2B54 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C67B205F5C8C006C2B54 /* Notifications.swift */; };
 		A2E7C6B8205FDAE0006C2B54 /* BusinessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C6B7205FDAE0006C2B54 /* BusinessViewModel.swift */; };
 		A2E7C6B9205FDAE0006C2B54 /* BusinessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C6B7205FDAE0006C2B54 /* BusinessViewModel.swift */; };
+		A2E7C6BB20611F3E006C2B54 /* ShiftLogsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C6BA20611F3E006C2B54 /* ShiftLogsTableViewController.swift */; };
+		A2E7C6BC20611F3E006C2B54 /* ShiftLogsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C6BA20611F3E006C2B54 /* ShiftLogsTableViewController.swift */; };
+		A2E7C6C220612025006C2B54 /* LogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C6C020612025006C2B54 /* LogTableViewCell.swift */; };
+		A2E7C6C320612025006C2B54 /* LogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C6C020612025006C2B54 /* LogTableViewCell.swift */; };
+		A2E7C6C420612025006C2B54 /* LogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2E7C6C120612025006C2B54 /* LogTableViewCell.xib */; };
+		A2E7C6C520612025006C2B54 /* LogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2E7C6C120612025006C2B54 /* LogTableViewCell.xib */; };
 		C0C7D17AE659C3B93143535B /* Pods_ShiftLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EAA5A2C0ABACD41E2228014 /* Pods_ShiftLog.framework */; };
 		C8C107B1E90AA5350E0214BF /* Pods_ShiftLogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F26EF1C668DC5DA1AD450950 /* Pods_ShiftLogTests.framework */; };
 		D592349386F68F6E81E6112B /* Pods_ShiftLogUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B893BCE22D47B63E4548EE9 /* Pods_ShiftLogUITests.framework */; };
@@ -124,6 +130,9 @@
 		A2E7C69D205FBCE9006C2B54 /* ShiftLogsMockData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ShiftLogsMockData.json; sourceTree = "<group>"; };
 		A2E7C69E205FBCE9006C2B54 /* BusinessMockData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BusinessMockData.json; sourceTree = "<group>"; };
 		A2E7C6B7205FDAE0006C2B54 /* BusinessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessViewModel.swift; sourceTree = "<group>"; };
+		A2E7C6BA20611F3E006C2B54 /* ShiftLogsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftLogsTableViewController.swift; sourceTree = "<group>"; };
+		A2E7C6C020612025006C2B54 /* LogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTableViewCell.swift; sourceTree = "<group>"; };
+		A2E7C6C120612025006C2B54 /* LogTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogTableViewCell.xib; sourceTree = "<group>"; };
 		D7ABA8380DE1DA0786DEF6AE /* Pods-ShiftLogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftLogTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShiftLogTests/Pods-ShiftLogTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F26EF1C668DC5DA1AD450950 /* Pods_ShiftLogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShiftLogTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D367F355CB40C150309A5A /* Pods-ShiftLog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftLog.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiftLog/Pods-ShiftLog.release.xcconfig"; sourceTree = "<group>"; };
@@ -174,8 +183,11 @@
 		3D2ED49A2060BE2900FE6644 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A2570979205BD0220003C0A4 /* ShiftLogMainViewController.swift */,
 				3D2ED49B2060BECE00FE6644 /* Main.storyboard */,
+				A2570979205BD0220003C0A4 /* ShiftLogMainViewController.swift */,
+				A2E7C6BA20611F3E006C2B54 /* ShiftLogsTableViewController.swift */,
+				A2E7C6C020612025006C2B54 /* LogTableViewCell.swift */,
+				A2E7C6C120612025006C2B54 /* LogTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -408,6 +420,7 @@
 			files = (
 				3D2ED4C32060D7F400FE6644 /* Main.storyboard in Resources */,
 				A2570985205BD0220003C0A4 /* LaunchScreen.storyboard in Resources */,
+				A2E7C6C420612025006C2B54 /* LogTableViewCell.xib in Resources */,
 				3D2ED4AD2060D72900FE6644 /* Pods-ShiftLog.release.xcconfig in Resources */,
 				A2B2CBF4205BE7A10019E8BF /* GoogleService-Info.plist in Resources */,
 				3D2ED4A72060D6AF00FE6644 /* Info.plist in Resources */,
@@ -424,6 +437,7 @@
 				3D2ED4B72060D73600FE6644 /* Pods-ShiftLogUITests.debug.xcconfig in Resources */,
 				3D2ED4A42060D69500FE6644 /* GoogleService-Info.plist in Resources */,
 				3D2ED4BC2060D74400FE6644 /* ShiftLogTests.xctest in Resources */,
+				A2E7C6C520612025006C2B54 /* LogTableViewCell.xib in Resources */,
 				3D2ED4BA2060D73900FE6644 /* Pods-ShiftLogUITests.release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,6 +487,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-ShiftLog/Pods-ShiftLog-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxMKMapView/RxMKMapView.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -483,6 +498,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxMKMapView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -617,11 +633,13 @@
 			files = (
 				A2E7C67C205F5C8C006C2B54 /* Notifications.swift in Sources */,
 				A2B2CBFB205D4E250019E8BF /* ShiftLogItem.swift in Sources */,
+				A2E7C6C220612025006C2B54 /* LogTableViewCell.swift in Sources */,
 				A2E7C679205F5627006C2B54 /* ShiftLogViewModel.swift in Sources */,
 				A2E7C66F205E7357006C2B54 /* Business.swift in Sources */,
 				A2E7C6B8205FDAE0006C2B54 /* BusinessViewModel.swift in Sources */,
 				A2E7C663205E13C4006C2B54 /* ApiService.swift in Sources */,
 				A2E7C675205E773F006C2B54 /* ShiftEvent.swift in Sources */,
+				A2E7C6BB20611F3E006C2B54 /* ShiftLogsTableViewController.swift in Sources */,
 				A257097A205BD0220003C0A4 /* ShiftLogMainViewController.swift in Sources */,
 				3D2ED49820606ED500FE6644 /* ShiftEventViewModel.swift in Sources */,
 				A2570978205BD0220003C0A4 /* AppDelegate.swift in Sources */,
@@ -633,6 +651,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2E7C6C320612025006C2B54 /* LogTableViewCell.swift in Sources */,
 				A2E7C6B5205FC0D1006C2B54 /* Notifications.swift in Sources */,
 				A2E7C6AA205FC081006C2B54 /* ShiftLogItem.swift in Sources */,
 				A2E7C6A9205FC07D006C2B54 /* AppDelegate.swift in Sources */,
@@ -645,6 +664,7 @@
 				A2E7C6B1205FC08E006C2B54 /* ShiftLogMainViewController.swift in Sources */,
 				3D2ED4A52060D6A200FE6644 /* BusinessViewModel.swift in Sources */,
 				A2E7C6A6205FC079006C2B54 /* ApiService.swift in Sources */,
+				A2E7C6BC20611F3E006C2B54 /* ShiftLogsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

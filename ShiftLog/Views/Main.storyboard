@@ -37,11 +37,14 @@
                         <viewLayoutGuide key="safeArea" id="NKe-ni-RnO"/>
                     </view>
                     <navigationItem key="navigationItem" title="Shift Log" id="h5S-wD-Wrn">
-                        <barButtonItem key="rightBarButtonItem" image="ic_nav_more" id="FMm-L8-Sgm"/>
+                        <barButtonItem key="rightBarButtonItem" image="ic_nav_more" id="FMm-L8-Sgm">
+                            <connections>
+                                <segue destination="ThR-hs-Tka" kind="show" id="cpG-AV-3GL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="TurnShiftOnOffButton" destination="YWR-cA-toE" id="5xL-rE-nNd"/>
-                        <segue destination="ThR-hs-Tka" kind="show" id="YGs-6K-4x4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="acr-pz-orZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -51,7 +54,7 @@
         <!--Shifts-->
         <scene sceneID="Act-Tr-njQ">
             <objects>
-                <tableViewController id="ThR-hs-Tka" sceneMemberID="viewController">
+                <tableViewController id="ThR-hs-Tka" customClass="ShiftLogsTableViewController" customModule="ShiftLog" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yzv-3p-kp0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
