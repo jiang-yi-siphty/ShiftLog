@@ -19,6 +19,7 @@ class ShiftLogsTableViewController: UITableViewController {
         }
     }
     var selectedCellIndexPath: IndexPath?
+    @IBOutlet weak var refreshBarbuttonItem: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +36,21 @@ class ShiftLogsTableViewController: UITableViewController {
     }
 
     fileprivate func bindUI() {
+        // MARK: set up tableview cell selected action
+        tableView.rx.itemSelected
+            .subscribe(onNext: { indexPath in
+                self.selectedCellIndexPath = indexPath
+                self.performSegue(withIdentifier: "ShowMapViewSegue", sender: self)
+            })
+            .disposed(by: disposeBag)
         
+        refreshBarbuttonItem.rx.tap.asObservable()
+            .subscribe(onNext: { () in
+                self.slViewModel?.updateShiftLogs()
+            }, onError: { error in
+                print("error: \(error.localizedDescription)")
+            }, onCompleted: nil, onDisposed: nil)
+            .disposed(by: disposeBag)
     }
     
     fileprivate func bindViewModel() {
@@ -46,4 +61,14 @@ class ShiftLogsTableViewController: UITableViewController {
             }.disposed(by: disposeBag)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowMapViewSegue" {
+            if let destinationVC = segue.destination as? ShiftMapViewController {
+                guard let selectedCellIndexPath = selectedCellIndexPath else { return }
+                guard let cell = tableView.cellForRow(at: selectedCellIndexPath) as? LogTableViewCell else { return }
+                guard let shiftLogItem = cell.shiftLogItem else { return }
+                destinationVC.shiftLogItem = shiftLogItem
+            }
+        }
+    }
 }

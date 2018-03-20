@@ -26,19 +26,19 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ktz-Ou-zmS">
-                        <rect key="frame" x="16" y="160" width="135" height="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Start Date Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ktz-Ou-zmS">
+                        <rect key="frame" x="7" y="160" width="154" height="18"/>
                         <constraints>
-                            <constraint firstAttribute="width" priority="500" constant="135" id="pcx-Ms-2fR"/>
+                            <constraint firstAttribute="width" constant="154" id="pcx-Ms-2fR"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qby-74-7Xz">
-                        <rect key="frame" x="169" y="163.5" width="135" height="14.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qby-74-7Xz">
+                        <rect key="frame" x="162" y="160" width="150" height="18"/>
                         <constraints>
-                            <constraint firstAttribute="width" priority="500" constant="135" id="2It-gI-PMm"/>
+                            <constraint firstAttribute="width" constant="150" id="2It-gI-PMm"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
@@ -51,7 +51,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKN-Fc-5t4">
-                        <rect key="frame" x="222" y="142.5" width="30" height="21"/>
+                        <rect key="frame" x="221.5" y="139" width="30" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -69,17 +69,17 @@
                     <constraint firstAttribute="bottom" secondItem="Qby-74-7Xz" secondAttribute="bottom" constant="10.5" id="5sM-cJ-vFf"/>
                     <constraint firstItem="Ktz-Ou-zmS" firstAttribute="top" secondItem="j7H-eM-lJM" secondAttribute="bottom" constant="1" id="70W-kn-sbH"/>
                     <constraint firstItem="vKN-Fc-5t4" firstAttribute="centerX" secondItem="Qby-74-7Xz" secondAttribute="centerX" id="BHg-n1-8KE"/>
-                    <constraint firstAttribute="trailing" secondItem="Qby-74-7Xz" secondAttribute="trailing" constant="16" id="C49-MN-dls"/>
-                    <constraint firstItem="j7H-eM-lJM" firstAttribute="centerX" secondItem="Ktz-Ou-zmS" secondAttribute="centerX" id="LY1-71-ecf"/>
+                    <constraint firstAttribute="trailing" secondItem="Qby-74-7Xz" secondAttribute="trailing" priority="500" constant="8" id="C49-MN-dls"/>
+                    <constraint firstItem="j7H-eM-lJM" firstAttribute="centerX" secondItem="Ktz-Ou-zmS" secondAttribute="centerX" constant="-1" id="LY1-71-ecf"/>
                     <constraint firstItem="ct0-OT-dWT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="110" id="Ml5-Hd-eWr"/>
                     <constraint firstItem="Qby-74-7Xz" firstAttribute="top" secondItem="vKN-Fc-5t4" secondAttribute="bottom" id="OjW-8u-Inf"/>
                     <constraint firstAttribute="bottom" secondItem="ct0-OT-dWT" secondAttribute="bottom" constant="49.5" id="QLs-LQ-Fcf"/>
                     <constraint firstItem="HjZ-On-UGp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="UrL-tF-cQS"/>
-                    <constraint firstItem="Ktz-Ou-zmS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Vpd-vq-smq"/>
+                    <constraint firstItem="Ktz-Ou-zmS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" priority="500" constant="7" id="Vpd-vq-smq"/>
                     <constraint firstAttribute="trailing" secondItem="ct0-OT-dWT" secondAttribute="trailing" constant="105" id="aCT-uW-kIN"/>
-                    <constraint firstItem="Qby-74-7Xz" firstAttribute="leading" secondItem="Ktz-Ou-zmS" secondAttribute="trailing" constant="18" id="aih-AA-mOE"/>
                     <constraint firstItem="ct0-OT-dWT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="34" id="ezf-Sk-wc7"/>
                     <constraint firstAttribute="bottom" secondItem="Ktz-Ou-zmS" secondAttribute="bottom" constant="10.5" id="g6s-27-K6u"/>
+                    <constraint firstItem="Ktz-Ou-zmS" firstAttribute="centerY" secondItem="Qby-74-7Xz" secondAttribute="centerY" id="xb0-cY-zd1"/>
                     <constraint firstItem="HjZ-On-UGp" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="zYC-NY-vmb"/>
                 </constraints>
             </tableViewCellContentView>

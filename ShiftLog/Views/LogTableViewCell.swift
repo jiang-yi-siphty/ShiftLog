@@ -34,6 +34,7 @@ class LogTableViewCell: UITableViewCell {
     }
     
     func configureCell(_ shiftLogItem: ShiftLogItem?) {
+        self.shiftLogItem = shiftLogItem
         guard let shiftLogItem = shiftLogItem else { return }
         startDateTimeLabel.text = shiftLogItem.start
         if shiftLogItem.end == "" {
@@ -47,20 +48,6 @@ class LogTableViewCell: UITableViewCell {
         shiftImageView.contentMode = .scaleAspectFit
         if let imageUrl = URL(string: imageUrlString + "\(shiftLogItem.id ?? Int(arc4random()))")  {
             shiftImageView.kf.setImage(with: imageUrl, placeholder: UIImage(named: "placeholder"), options: nil, progressBlock: nil, completionHandler: nil)
-//            DispatchQueue.global().async {
-//                do {
-//                    let data = try Data(contentsOf: imageUrl)
-//                    DispatchQueue.main.async {
-//                        self.shiftImageView?.image = UIImage(data: data)
-//                    }
-//                } catch {
-//                    DispatchQueue.main.async {
-//                        if let image = UIImage(named: "placeholder") {
-//                            self.shiftImageView?.image = image
-//                        }
-//                    }
-//                }
-//            }
         }
     }
 }

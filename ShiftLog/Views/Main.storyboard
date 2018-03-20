@@ -18,8 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4G-R7-pWQ">
+                                <rect key="frame" x="137" y="97" width="101" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lr9-T3-iR5">
+                                <rect key="frame" x="67.5" y="148" width="240" height="174"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="174" id="wed-0y-X01"/>
+                                    <constraint firstAttribute="width" constant="240" id="xaf-so-IRz"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWR-cA-toE">
-                                <rect key="frame" x="16" y="560" width="343" height="46"/>
+                                <rect key="frame" x="16" y="589" width="343" height="46"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="MOo-5M-eRl"/>
@@ -30,9 +43,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="NKe-ni-RnO" firstAttribute="bottom" secondItem="YWR-cA-toE" secondAttribute="bottom" constant="61" id="DCz-cE-dz9"/>
+                            <constraint firstItem="NKe-ni-RnO" firstAttribute="bottom" secondItem="YWR-cA-toE" secondAttribute="bottom" constant="32" id="DCz-cE-dz9"/>
+                            <constraint firstItem="o4G-R7-pWQ" firstAttribute="top" secondItem="NKe-ni-RnO" secondAttribute="top" constant="33" id="Qvy-Yc-Zyh"/>
+                            <constraint firstItem="o4G-R7-pWQ" firstAttribute="centerX" secondItem="NKe-ni-RnO" secondAttribute="centerX" id="Yq0-pt-rY7"/>
                             <constraint firstItem="YWR-cA-toE" firstAttribute="leading" secondItem="NKe-ni-RnO" secondAttribute="leading" constant="16" id="ZYw-uJ-x6s"/>
+                            <constraint firstItem="lr9-T3-iR5" firstAttribute="top" secondItem="o4G-R7-pWQ" secondAttribute="bottom" constant="19" id="doa-fm-zo0"/>
                             <constraint firstItem="NKe-ni-RnO" firstAttribute="trailing" secondItem="YWR-cA-toE" secondAttribute="trailing" constant="16" id="qmc-Wb-Z95"/>
+                            <constraint firstItem="lr9-T3-iR5" firstAttribute="centerX" secondItem="o4G-R7-pWQ" secondAttribute="centerX" id="yeF-2O-ZeT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NKe-ni-RnO"/>
                     </view>
@@ -44,7 +61,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="TurnShiftOnOffButton" destination="YWR-cA-toE" id="5xL-rE-nNd"/>
+                        <outlet property="businessLogoImageView" destination="lr9-T3-iR5" id="WQR-wH-SvM"/>
+                        <outlet property="businessNameLabel" destination="o4G-R7-pWQ" id="vRe-tl-DQK"/>
+                        <outlet property="turnShiftOnOffButton" destination="YWR-cA-toE" id="aFu-uO-CrM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="acr-pz-orZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -74,9 +93,12 @@
                             <outlet property="delegate" destination="ThR-hs-Tka" id="YbA-cf-Ozt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Shifts" id="dUH-jV-9Ri"/>
+                    <navigationItem key="navigationItem" title="Shifts" id="dUH-jV-9Ri">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="QxD-mh-uj3"/>
+                    </navigationItem>
                     <connections>
-                        <segue destination="7GB-Ta-nlQ" kind="show" id="n1H-l5-O6L"/>
+                        <outlet property="refreshBarbuttonItem" destination="QxD-mh-uj3" id="RkT-Zw-QZF"/>
+                        <segue destination="7GB-Ta-nlQ" kind="show" identifier="ShowMapViewSegue" id="n1H-l5-O6L"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZD8-x6-k41" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -86,7 +108,7 @@
         <!--Shift Location-->
         <scene sceneID="8h2-b6-Ytv">
             <objects>
-                <viewController id="7GB-Ta-nlQ" sceneMemberID="viewController">
+                <viewController id="7GB-Ta-nlQ" customClass="ShiftMapViewController" customModule="ShiftLog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qqo-BX-maX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,6 +127,9 @@
                         <viewLayoutGuide key="safeArea" id="Q82-2i-tbi"/>
                     </view>
                     <navigationItem key="navigationItem" title="Shift Location" id="qRE-KQ-A2F"/>
+                    <connections>
+                        <outlet property="shiftMapView" destination="z7d-KN-mQV" id="OoX-5r-4Bm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y4Q-8k-pfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

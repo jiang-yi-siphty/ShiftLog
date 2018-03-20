@@ -139,12 +139,12 @@ extension ShiftEventViewModel {
     func storeShiftEvent(inShift: Bool) {
         let shiftEventRef = Database.database().reference(withPath: "\(ApiConfig.firstNameYiSHA1)")
         isInShift.value = inShift
-        shiftEventRef.child("ShiftStatus").child("InShift").setValue(inShift)
+        shiftEventRef.child("InShift").setValue(inShift)
     }
     
     func restoreShiftEvent(_ handler:@escaping ((_ inShift: Bool?) -> Void) ){
         let shiftEventRef = Database.database().reference(withPath: "\(ApiConfig.firstNameYiSHA1)")
-        shiftEventRef.child("ShiftStatus").child("InShift").observeSingleEvent(of: .value, with: { (snapshot) in
+        shiftEventRef.child("InShift").observeSingleEvent(of: .value, with: { (snapshot) in
             handler(snapshot.value as? Bool)
         })
     }

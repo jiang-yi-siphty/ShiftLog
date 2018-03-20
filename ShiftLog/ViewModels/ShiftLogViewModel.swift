@@ -29,7 +29,6 @@ class ShiftLogViewModel {
     }
     
     fileprivate func fetchShiftLogs(_ apiService: ApiService) {
-        
         self.isFetchingData.value = true
         apiService.fetchRestfulApi(ApiConfig.shiftLogs)
             .subscribe(onNext: { status in
@@ -39,7 +38,8 @@ class ShiftLogViewModel {
                     guard let data = data else { return }
                     self.storeUserShiftLogs(data)
                     do {
-                        self.shiftLogs.value = try JSONDecoder().decode([ShiftLogItem].self, from: data)
+                        let shiftLogsBackward = try JSONDecoder().decode([ShiftLogItem].self, from: data)
+                        self.shiftLogs.value = shiftLogsBackward.reversed()
                         self.isAlertShowing.value = false
                     } catch {
                         self.shiftLogs.value = []
@@ -49,7 +49,8 @@ class ShiftLogViewModel {
                     self.restoreUserShiftLogs({ data in
                         guard let data = data else { return }
                         do {
-                        self.shiftLogs.value = try JSONDecoder().decode([ShiftLogItem].self, from: data)
+                            let shiftLogsBackward = try JSONDecoder().decode([ShiftLogItem].self, from: data)
+                            self.shiftLogs.value = shiftLogsBackward.reversed()
                         } catch {
                             self.shiftLogs.value = []
                             self.isAlertShowing.value = true
@@ -62,7 +63,8 @@ class ShiftLogViewModel {
                 self.restoreUserShiftLogs({ data in
                     guard let data = data else { return }
                     do {
-                        self.shiftLogs.value = try JSONDecoder().decode([ShiftLogItem].self, from: data)
+                        let shiftLogsBackward = try JSONDecoder().decode([ShiftLogItem].self, from: data)
+                        self.shiftLogs.value = shiftLogsBackward.reversed()
                     } catch {
                         self.shiftLogs.value = []
                         self.isAlertShowing.value = true

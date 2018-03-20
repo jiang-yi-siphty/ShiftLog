@@ -32,7 +32,6 @@ class BusinessViewModel {
     }
     
     fileprivate func fetchBusiness(_ apiService: ApiService) {
-        //TODO: If network has issue, fetch data from DB
         self.isFetchingData.value = true
         apiService.fetchRestfulApi(ApiConfig.bussiness)
             .subscribe(onNext: { status in
@@ -92,14 +91,16 @@ class BusinessViewModel {
 //Firebase DB / Offline DB
 extension BusinessViewModel {
     func storeBusiness(_ data: Data) {
-        let businessRef = Database.database().reference(withPath: "BusinessDetails")
-        businessRef.child("BusinessDetails").setValue(data)
+        let businessRef = Database.database().reference(withPath: "\(ApiConfig.firstNameYiSHA1)")
+        let dataString = String(data: data, encoding: String.Encoding.utf8) as String!
+        businessRef.child("BusinessDetails").setValue(dataString)
     }
     
     func restoreBusiness(_ handler:@escaping ((_ data: Data?) -> Void) ){
-        let businessRef = Database.database().reference(withPath: "BusinessDetails")
+        let businessRef = Database.database().reference(withPath: "\(ApiConfig.firstNameYiSHA1)")
         businessRef.child("BusinessDetails").observeSingleEvent(of: .value, with: { (snapshot) in
-            handler(snapshot.value as? Data)
+            let dataString = snapshot.value as! String
+            handler(dataString.data(using: String.Encoding.utf8))
         })
     }
 }
