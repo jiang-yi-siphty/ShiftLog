@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 import CoreLocation
+import Firebase
 
 class ShiftEventViewModel {
     
@@ -38,11 +39,14 @@ class ShiftEventViewModel {
                     case .success(let data):
                         guard let data = data else { return }
                         print("POST Successful " + data.description)
+                    //TODO: Store current status
                     case .fail(let error):
+                        //TODO: Restore current status
                         print(error.errorDescription ?? "Faild to load Scenic Location data")
                         self.isAlertShowing.value = true
                     }
                 }, onError: { error in
+                    //TODO: Restore current status
                     print(error.localizedDescription)
                 }, onCompleted: nil, onDisposed: nil)
                 .disposed(by: disposeBag)
@@ -51,7 +55,7 @@ class ShiftEventViewModel {
         }
     }
     
-    func endShiftEvent() {
+    public func endShiftEvent() {
         //TODO: If network has issue, fetch data from DB
         do {
             let body = try JSONEncoder().encode(createShiftEvent())
@@ -63,11 +67,13 @@ class ShiftEventViewModel {
                     case .success(let data):
                         guard let data = data else { return }
                         print("POST Successful " + data.description)
+                    //TODO: Store current status
                     case .fail(let error):
                         print(error.errorDescription ?? "Faild to load Scenic Location data")
                         self.isAlertShowing.value = true
                     }
                 }, onError: { error in
+                    //TODO: Restore current status
                     print(error.localizedDescription)
                 }, onCompleted: nil, onDisposed: nil)
                 .disposed(by: disposeBag)
@@ -77,7 +83,7 @@ class ShiftEventViewModel {
         
     }
     
-    func createShiftEvent() -> ShiftEvent {
+    private func createShiftEvent() -> ShiftEvent {
         var shiftEvent = ShiftEvent()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
@@ -88,7 +94,7 @@ class ShiftEventViewModel {
         return shiftEvent
     }
     
-    func getCurrentLocation() -> CLLocation? {
+    private func getCurrentLocation() -> CLLocation? {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let locationManager = appDelegate.locationManager
         

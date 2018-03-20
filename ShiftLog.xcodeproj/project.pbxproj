@@ -9,8 +9,24 @@
 /* Begin PBXBuildFile section */
 		3D2ED49820606ED500FE6644 /* ShiftEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2ED49720606ED500FE6644 /* ShiftEventViewModel.swift */; };
 		3D2ED49920606ED500FE6644 /* ShiftEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2ED49720606ED500FE6644 /* ShiftEventViewModel.swift */; };
-		3D2ED49C2060BECE00FE6644 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D2ED49B2060BECE00FE6644 /* MainStoryboard.storyboard */; };
-		3D2ED49D2060BECE00FE6644 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D2ED49B2060BECE00FE6644 /* MainStoryboard.storyboard */; };
+		3D2ED4A12060D66500FE6644 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2ED4A22060D66500FE6644 /* Alamofire.framework */; };
+		3D2ED4A32060D69500FE6644 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2B2CBF3205BE7A10019E8BF /* GoogleService-Info.plist */; };
+		3D2ED4A42060D69500FE6644 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2B2CBF3205BE7A10019E8BF /* GoogleService-Info.plist */; };
+		3D2ED4A52060D6A200FE6644 /* BusinessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7C6B7205FDAE0006C2B54 /* BusinessViewModel.swift */; };
+		3D2ED4A62060D6A400FE6644 /* ShiftEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2ED49720606ED500FE6644 /* ShiftEventViewModel.swift */; };
+		3D2ED4A72060D6AF00FE6644 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2570986205BD0220003C0A4 /* Info.plist */; };
+		3D2ED4A82060D6AF00FE6644 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2570986205BD0220003C0A4 /* Info.plist */; };
+		3D2ED4A92060D6B000FE6644 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2570986205BD0220003C0A4 /* Info.plist */; };
+		3D2ED4AA2060D72500FE6644 /* Pods-ShiftLog.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 67A005B176F40E06CFF39DBF /* Pods-ShiftLog.debug.xcconfig */; };
+		3D2ED4AD2060D72900FE6644 /* Pods-ShiftLog.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F7D367F355CB40C150309A5A /* Pods-ShiftLog.release.xcconfig */; };
+		3D2ED4B22060D72F00FE6644 /* Pods-ShiftLogTests.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D7ABA8380DE1DA0786DEF6AE /* Pods-ShiftLogTests.debug.xcconfig */; };
+		3D2ED4B52060D73300FE6644 /* Pods-ShiftLogTests.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F5EEBEE6271874BC21FF4 /* Pods-ShiftLogTests.release.xcconfig */; };
+		3D2ED4B72060D73600FE6644 /* Pods-ShiftLogUITests.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5153B9DE5C3998C0DD0ADA8B /* Pods-ShiftLogUITests.debug.xcconfig */; };
+		3D2ED4BA2060D73900FE6644 /* Pods-ShiftLogUITests.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 33C0956886EC2B6C2F2BD837 /* Pods-ShiftLogUITests.release.xcconfig */; };
+		3D2ED4BC2060D74400FE6644 /* ShiftLogTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = A2E7C690205FBCC8006C2B54 /* ShiftLogTests.xctest */; };
+		3D2ED4C12060D75A00FE6644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2570981205BD0220003C0A4 /* Assets.xcassets */; };
+		3D2ED4C22060D7E400FE6644 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D2ED49B2060BECE00FE6644 /* Main.storyboard */; };
+		3D2ED4C32060D7F400FE6644 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D2ED49B2060BECE00FE6644 /* Main.storyboard */; };
 		A2570978205BD0220003C0A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2570977205BD0220003C0A4 /* AppDelegate.swift */; };
 		A257097A205BD0220003C0A4 /* ShiftLogMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2570979205BD0220003C0A4 /* ShiftLogMainViewController.swift */; };
 		A2570982205BD0220003C0A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2570981205BD0220003C0A4 /* Assets.xcassets */; };
@@ -75,7 +91,8 @@
 /* Begin PBXFileReference section */
 		33C0956886EC2B6C2F2BD837 /* Pods-ShiftLogUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftLogUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiftLogUITests/Pods-ShiftLogUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3D2ED49720606ED500FE6644 /* ShiftEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftEventViewModel.swift; sourceTree = "<group>"; };
-		3D2ED49B2060BECE00FE6644 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		3D2ED49B2060BECE00FE6644 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3D2ED4A22060D66500FE6644 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5153B9DE5C3998C0DD0ADA8B /* Pods-ShiftLogUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftLogUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShiftLogUITests/Pods-ShiftLogUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		67A005B176F40E06CFF39DBF /* Pods-ShiftLog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftLog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShiftLog/Pods-ShiftLog.debug.xcconfig"; sourceTree = "<group>"; };
 		6B4F5EEBEE6271874BC21FF4 /* Pods-ShiftLogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftLogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiftLogTests/Pods-ShiftLogTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D2ED4A12060D66500FE6644 /* Alamofire.framework in Frameworks */,
 				C8C107B1E90AA5350E0214BF /* Pods_ShiftLogTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,7 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				A2570979205BD0220003C0A4 /* ShiftLogMainViewController.swift */,
-				3D2ED49B2060BECE00FE6644 /* MainStoryboard.storyboard */,
+				3D2ED49B2060BECE00FE6644 /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -264,6 +282,7 @@
 		C991EDDBCE6B552513BBB628 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D2ED4A22060D66500FE6644 /* Alamofire.framework */,
 				8EAA5A2C0ABACD41E2228014 /* Pods_ShiftLog.framework */,
 				F26EF1C668DC5DA1AD450950 /* Pods_ShiftLogTests.framework */,
 				6B893BCE22D47B63E4548EE9 /* Pods_ShiftLogUITests.framework */,
@@ -387,10 +406,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D2ED4C32060D7F400FE6644 /* Main.storyboard in Resources */,
 				A2570985205BD0220003C0A4 /* LaunchScreen.storyboard in Resources */,
+				3D2ED4AD2060D72900FE6644 /* Pods-ShiftLog.release.xcconfig in Resources */,
 				A2B2CBF4205BE7A10019E8BF /* GoogleService-Info.plist in Resources */,
-				3D2ED49C2060BECE00FE6644 /* MainStoryboard.storyboard in Resources */,
+				3D2ED4A72060D6AF00FE6644 /* Info.plist in Resources */,
 				A2570982205BD0220003C0A4 /* Assets.xcassets in Resources */,
+				3D2ED4AA2060D72500FE6644 /* Pods-ShiftLog.debug.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +420,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D2ED4A82060D6AF00FE6644 /* Info.plist in Resources */,
+				3D2ED4B72060D73600FE6644 /* Pods-ShiftLogUITests.debug.xcconfig in Resources */,
+				3D2ED4A42060D69500FE6644 /* GoogleService-Info.plist in Resources */,
+				3D2ED4BC2060D74400FE6644 /* ShiftLogTests.xctest in Resources */,
+				3D2ED4BA2060D73900FE6644 /* Pods-ShiftLogUITests.release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,12 +432,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D2ED49D2060BECE00FE6644 /* MainStoryboard.storyboard in Resources */,
+				3D2ED4C22060D7E400FE6644 /* Main.storyboard in Resources */,
+				3D2ED4A92060D6B000FE6644 /* Info.plist in Resources */,
+				3D2ED4C12060D75A00FE6644 /* Assets.xcassets in Resources */,
 				A2E7C6A0205FBCE9006C2B54 /* WrongAPI.json in Resources */,
 				A2E7C6A2205FBCE9006C2B54 /* ShiftLogsMockData.json in Resources */,
 				A2E7C69F205FBCE9006C2B54 /* StartShiftMockData.json in Resources */,
+				3D2ED4B52060D73300FE6644 /* Pods-ShiftLogTests.release.xcconfig in Resources */,
 				A2E7C6A3205FBCE9006C2B54 /* BusinessMockData.json in Resources */,
 				A2E7C6A1205FBCE9006C2B54 /* MissingAuthToken.json in Resources */,
+				3D2ED4A32060D69500FE6644 /* GoogleService-Info.plist in Resources */,
+				3D2ED4B22060D72F00FE6644 /* Pods-ShiftLogTests.debug.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,11 +637,13 @@
 				A2E7C6AA205FC081006C2B54 /* ShiftLogItem.swift in Sources */,
 				A2E7C6A9205FC07D006C2B54 /* AppDelegate.swift in Sources */,
 				A257099B205BD0220003C0A4 /* ShiftLogUITests.swift in Sources */,
+				3D2ED4A62060D6A400FE6644 /* ShiftEventViewModel.swift in Sources */,
 				A2E7C6B3205FC092006C2B54 /* ShiftLogViewModel.swift in Sources */,
 				A2E7C6AF205FC08B006C2B54 /* ShiftEvent.swift in Sources */,
 				A2E7C6AD205FC085006C2B54 /* Business.swift in Sources */,
 				A2E7C6A5205FC076006C2B54 /* ApiClient.swift in Sources */,
 				A2E7C6B1205FC08E006C2B54 /* ShiftLogMainViewController.swift in Sources */,
+				3D2ED4A52060D6A200FE6644 /* BusinessViewModel.swift in Sources */,
 				A2E7C6A6205FC079006C2B54 /* ApiService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

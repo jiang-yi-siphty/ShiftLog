@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import Firebase
 
 class BusinessViewModel {
     
@@ -46,13 +47,31 @@ class BusinessViewModel {
                         self.business.value = nil
                         self.isAlertShowing.value = true
                     }
+                    self.storeBusiness(data)
                 case .fail(let error):
+                    self.restoreBusiness({ data in
+                        guard let data = data else { return }
+                        do {
+                            self.business.value = try JSONDecoder().decode(Business.self, from: data)
+                            self.isAlertShowing.value = false
+                        } catch {
+                            self.business.value = nil
+                            self.isAlertShowing.value = true
+                        }
+                    })
                     print(error.errorDescription ?? "Faild to load Scenic Location data")
-                    self.isAlertShowing.value = true
                 }
             }, onError: { error in
-                print(error.localizedDescription)
-                self.business.value = nil
+                self.restoreBusiness({ data in
+                    guard let data = data else { return }
+                    do {
+                        self.business.value = try JSONDecoder().decode(Business.self, from: data)
+                        self.isAlertShowing.value = false
+                    } catch {
+                        self.business.value = nil
+                        self.isAlertShowing.value = true
+                    }
+                })
             }, onCompleted: nil, onDisposed: nil)
             .disposed(by: disposeBag)
     }
@@ -70,3 +89,17 @@ class BusinessViewModel {
 }
 
 
+//Firebase DB / Offline DB
+extension BusinessViewModel {
+    func storeBusiness(_ data: Data) {
+        let businessRef = Database.database().reference(withPath: "BusinessDetails")
+        businessRef.child("BusinessDetails").setValue(data)
+    }
+    
+    func restoreBusiness(_ handler:@escaping ((_ data: Data?) -> Void) ){
+        let businessRef = Database.database().reference(withPath: "BusinessDetails")
+        businessRef.child("BusinessDetails").observeSingleEvent(of: .value, with: { (snapshot) in
+            handler(snapshot.value as? Data)
+        })
+    }
+}

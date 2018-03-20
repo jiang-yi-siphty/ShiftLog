@@ -41,5 +41,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This App needs your location to show nearest scenics.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This App needs your location to show nearest scenics.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This App needs your location to show nearest scenics.</string>
 </dict>
 </plist>

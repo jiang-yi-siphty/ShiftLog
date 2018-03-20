@@ -34,6 +34,7 @@ enum  ApiConfig {
     case shiftLogs
     
     fileprivate static let shiftLogBaseUrl = "https://apjoqdqpi3.execute-api.us-west-2.amazonaws.com/dmc"
+    public static let userNameSHA1 = "d82ece8d514aca7e24d3fc11fbb8dada57f2966c"
     
     var urlPath: String {
         switch self {
@@ -64,7 +65,7 @@ enum  ApiConfig {
     var header: [String: String]?{
         switch self {
         case .bussiness, .startShift, .endShift, .shiftLogs:
-            return ["Authorization": "Deputy " + "d82ece8d514aca7e24d3fc11fbb8dada57f2966c"]
+            return ["Authorization": "Deputy " + ApiConfig.userNameSHA1]
         }
     }
     

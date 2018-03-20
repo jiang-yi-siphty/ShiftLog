@@ -1,7 +1,5 @@
 PODS:
   - Alamofire (4.7.0)
-  - Firebase (4.10.1):
-    - Firebase/Core (= 4.10.1)
   - Firebase/Core (4.10.1):
     - FirebaseAnalytics (= 4.1.0)
     - FirebaseCore (= 4.0.17)
@@ -39,7 +37,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - Firebase
   - Firebase/Core
   - Firebase/Database
   - RxCocoa
@@ -60,6 +57,6 @@ SPEC CHECKSUMS:
   RxMKMapView: 5cd47305a35e6dbf8bceb7713280060950203188
   RxSwift: e49536837d9901277638493ea537394d4b55f570
 
-PODFILE CHECKSUM: 09e1e4545d32dbda78956687e7d1cfbdbb21da6f
+PODFILE CHECKSUM: 3b314f80d1b9f229f1551f8303a99d807e39bb93
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0

@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreLocation
-import FirebaseCore
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         //MARK: Firebase
         FirebaseApp.configure()
+        Database.database().isPersistenceEnabled = true
         
         //MARK: LocationManager
         locationManager.delegate = self
