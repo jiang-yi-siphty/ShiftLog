@@ -17,6 +17,7 @@ class ShiftEventViewModel {
     var shiftEvent = Variable<ShiftEvent?>(nil)
     var isFetchingData = Variable<Bool>(false)
     var isAlertShowing = Variable<Bool>(false)
+    var isInShift = Variable<Bool>(false)
     private var apiService: ApiService? = nil
     enum status: Int {
         case start = 0
@@ -25,10 +26,15 @@ class ShiftEventViewModel {
     
     init(_ apiService: ApiService) {
         self.apiService = apiService
+        restoreShiftEvent { inShift in
+            self.isInShift.value = inShift ?? false
+        }
     }
     
     public func startShiftEvent(){
-        //TODO: If network has issue, fetch data from DB
+        restoreShiftEvent { inShift in
+            self.isInShift.value = inShift ?? false
+        }
         do {
             let body = try JSONEncoder().encode(createShiftEvent())
             guard let apiService = self.apiService else { return }
@@ -39,14 +45,18 @@ class ShiftEventViewModel {
                     case .success(let data):
                         guard let data = data else { return }
                         print("POST Successful " + data.description)
-                    //TODO: Store current status
+                        self.storeShiftEvent(inShift: true)
                     case .fail(let error):
-                        //TODO: Restore current status
+                        self.restoreShiftEvent { inShift in
+                            self.isInShift.value = inShift ?? false
+                        }
                         print(error.errorDescription ?? "Faild to load Scenic Location data")
                         self.isAlertShowing.value = true
                     }
                 }, onError: { error in
-                    //TODO: Restore current status
+                    self.restoreShiftEvent { inShift in
+                        self.isInShift.value = inShift ?? false
+                    }
                     print(error.localizedDescription)
                 }, onCompleted: nil, onDisposed: nil)
                 .disposed(by: disposeBag)
@@ -56,7 +66,9 @@ class ShiftEventViewModel {
     }
     
     public func endShiftEvent() {
-        //TODO: If network has issue, fetch data from DB
+        restoreShiftEvent { inShift in
+            self.isInShift.value = inShift ?? true
+        }
         do {
             let body = try JSONEncoder().encode(createShiftEvent())
             guard let apiService = self.apiService else { return }
@@ -67,13 +79,18 @@ class ShiftEventViewModel {
                     case .success(let data):
                         guard let data = data else { return }
                         print("POST Successful " + data.description)
-                    //TODO: Store current status
+                        self.storeShiftEvent(inShift: false)
                     case .fail(let error):
+                        self.restoreShiftEvent { inShift in
+                            self.isInShift.value = inShift ?? true
+                        }
                         print(error.errorDescription ?? "Faild to load Scenic Location data")
                         self.isAlertShowing.value = true
                     }
                 }, onError: { error in
-                    //TODO: Restore current status
+                    self.restoreShiftEvent { inShift in
+                        self.isInShift.value = inShift ?? true
+                    }
                     print(error.localizedDescription)
                 }, onCompleted: nil, onDisposed: nil)
                 .disposed(by: disposeBag)
@@ -115,5 +132,20 @@ class ShiftEventViewModel {
         }
         return currentLocation
     }
+}
+
+//Firebase DB / Offline DB
+extension ShiftEventViewModel {
+    func storeShiftEvent(inShift: Bool) {
+        let shiftEventRef = Database.database().reference(withPath: "ShiftStatus")
+        isInShift.value = inShift
+        shiftEventRef.child("InShift").setValue(inShift)
+    }
     
+    func restoreShiftEvent(_ handler:@escaping ((_ inShift: Bool?) -> Void) ){
+        let shiftEventRef = Database.database().reference(withPath: "ShiftStatus")
+        shiftEventRef.child("InShift").observeSingleEvent(of: .value, with: { (snapshot) in
+            handler(snapshot.value as? Bool)
+        })
+    }
 }

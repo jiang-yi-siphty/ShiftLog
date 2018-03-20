@@ -78,12 +78,12 @@ class ShiftLogViewModel {
 extension ShiftLogViewModel {
     func storeUserShiftLogs(_ data: Data) {
         let shiftLogsRef = Database.database().reference(withPath: "ShiftLogs")
-        shiftLogsRef.child("\(ApiConfig.userNameSHA1)").setValue(data)
+        shiftLogsRef.child("\(ApiConfig.firstNameYiSHA1)").setValue(data)
     }
     
     func restoreUserShiftLogs(_ handler:@escaping ((_ data: Data?) -> Void) ){
         let shiftLogsRef = Database.database().reference(withPath: "ShiftLogs")
-        shiftLogsRef.child("\(ApiConfig.userNameSHA1)").observeSingleEvent(of: .value, with: { (snapshot) in
+        shiftLogsRef.child("\(ApiConfig.firstNameYiSHA1)").observeSingleEvent(of: .value, with: { (snapshot) in
             handler(snapshot.value as? Data)
         })
     }
